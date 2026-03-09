@@ -1,0 +1,83 @@
+{
+  "name": "AutomationExerciseProjectForFriday",
+  "projectId": "e1b0be43-c177-4b10-9f2a-08fd165ba752",
+  "description": "Test Automation Project",
+  "main": "Main.xaml",
+  "dependencies": {
+    "LibraryForTenTabs": "[1.0.10]",
+    "RecorderForTestCases": "[1.0.6]",
+    "UiPath.System.Activities": "[25.12.0-preview]",
+    "UiPath.Testing.Activities": "[25.10.0]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "26.0.185.0",
+  "projectVersion": "1.0.0",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "NewtonsoftJson",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Tests",
+    "libraryOptions": {
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "0478f503-8844-4f52-9dd2-78b8c07ad9d5",
+        "testCaseType": "TestCase",
+        "fileName": "TestCase.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "2d444d91-9d15-48c3-9e12-7c1843014de3",
+        "testCaseType": "TestCase",
+        "fileName": "baseTemplate.xaml"
+      },
+      {
+        "templateType": "TestCase",
+        "fileName": ".templates\\baseTemplateTemplate.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "7f7c81b9-9135-4320-be32-f8da00d25de1",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "TestCases\\TC_01_RegisterUser.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "557c5097-54ee-4371-8b04-3220e891a7a9",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "TestCases\\TC_02_LoginWithValidCred.xaml"
+      }
+    ],
+    "saveToCloud": false
+  },
+  "expressionLanguage": "CSharp",
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Windows"
+}
