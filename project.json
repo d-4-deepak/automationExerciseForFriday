@@ -6,6 +6,7 @@
   "dependencies": {
     "LibraryForTenTabs": "[1.0.10]",
     "RecorderForTestCases": "[1.0.6]",
+    "UiPath.GSuite.Activities": "[3.7.10]",
     "UiPath.System.Activities": "[25.12.0-preview]",
     "UiPath.Testing.Activities": "[25.10.0]"
   },
@@ -55,10 +56,6 @@
         "fileName": "baseTemplate.xaml"
       },
       {
-        "templateType": "TestCase",
-        "fileName": ".templates\\baseTemplateTemplate.xaml"
-      },
-      {
         "editingStatus": "InProgress",
         "testCaseId": "7f7c81b9-9135-4320-be32-f8da00d25de1",
         "testCaseType": "TestCase",
@@ -71,6 +68,45 @@
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
         "fileName": "TestCases\\TC_02_LoginWithValidCred.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "a819a3b0-4459-444a-9bf5-aa46ddcf2f23",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "TestCaseLogin.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "175ae5c8-3367-414f-ad54-f43a9c7b7978",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "TestCaseLoging.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "de43ac0f-204b-4486-be36-9a79254f881d",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "TestCases\\TC_03_LoginUserWithInvalidCred.xaml"
+      },
+      {
+        "templateType": "TestCase",
+        "fileName": ".templates\\baseTemplateTemplate.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "e47b15cb-2477-4db1-83ee-afbd5103a041",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "TestCases\\TC_04_Logout.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "e096407b-2a1b-461f-8367-3e1739c35c55",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "TestCases\\TC_05_RegisterUser_withExistingImage.xaml"
       }
     ],
     "saveToCloud": false
