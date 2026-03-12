@@ -4,10 +4,10 @@
   "description": "Test Automation Project",
   "main": "Main.xaml",
   "dependencies": {
-    "LibraryForTenTabs": "[1.0.45]",
+    "LibraryForTenTabs": "[1.0.49]",
     "RecorderForTestCases": "[1.0.6]",
     "UiPath.GSuite.Activities": "[3.7.10]",
-    "UiPath.IntegrationService.Activities": "[1.22.0]",
+    "UiPath.IntegrationService.Activities": "[1.23.0]",
     "UiPath.System.Activities": "[25.12.0-preview]",
     "UiPath.Testing.Activities": "[25.10.0]"
   },
@@ -202,10 +202,10 @@
       },
       {
         "editingStatus": "InProgress",
-        "testCaseId": "7e072af8-c6e0-401d-9b6a-5ca1db3ce888",
+        "testCaseId": "f44417cc-a4fa-4ff4-b9e7-909f4161014b",
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
-        "fileName": "TestCases\\EndToEnd_Test.xaml"
+        "fileName": "TestCases\\EndToEnd.xaml"
       }
     ],
     "saveToCloud": false

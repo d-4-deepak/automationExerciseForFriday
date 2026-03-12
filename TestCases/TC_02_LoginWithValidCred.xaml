@@ -168,7 +168,7 @@
       <AssemblyReference>CAB95E1C562_issue_at.hzJim2leBWM1HE6XpIT1Pe2</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="515,2574" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="833,2932" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_dataTable" />
       <Variable x:TypeArguments="x:Boolean" Name="isLogin" />
@@ -178,9 +178,9 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="515,2551" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="515,2909" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="513,1862" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="513,2220" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="Browser" />
             <Variable x:TypeArguments="x:String" Name="password" />
@@ -323,7 +323,7 @@
               </OutArgument>
             </l:LoginCheck.isLogin>
           </l:LoginCheck>
-          <l:Login isLoginSuccessful="{x:Null}" sap:VirtualizedContainerService.HintSize="479,430" sap2010:WorkflowViewState.IdRef="Login_1">
+          <l:Login isLoginSuccessful="{x:Null}" sap:VirtualizedContainerService.HintSize="479,439" sap2010:WorkflowViewState.IdRef="Login_1">
             <l:Login.Browser>
               <InArgument x:TypeArguments="x:String">
                 <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">Browser</CSharpValue>
@@ -355,6 +355,24 @@
               </InArgument>
             </l:Login.suiteIdLocal>
           </l:Login>
+          <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="479,127" sap2010:WorkflowViewState.IdRef="Delay_1" />
+          <l:Logout sap:VirtualizedContainerService.HintSize="479,222" sap2010:WorkflowViewState.IdRef="Logout_1">
+            <l:Logout.Browser>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_23">Browser</CSharpValue>
+              </InArgument>
+            </l:Logout.Browser>
+            <l:Logout.reportIdLocal>
+              <InArgument x:TypeArguments="x:Int32">
+                <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_25">reportIdLocal</CSharpValue>
+              </InArgument>
+            </l:Logout.reportIdLocal>
+            <l:Logout.suiteIdLocal>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_24">suiteIdLocal</CSharpValue>
+              </InArgument>
+            </l:Logout.suiteIdLocal>
+          </l:Logout>
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>

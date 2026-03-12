@@ -177,7 +177,7 @@
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="921,5999" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="833,6332" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_dataTable" />
       <Variable x:TypeArguments="x:Int32" Name="int_reportID" />
@@ -192,9 +192,9 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="585,5976" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="585,6309" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="583,2986" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="583,3319" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="name" />
             <Variable x:TypeArguments="x:String" Name="email" />
@@ -374,7 +374,7 @@
               </OutArgument>
             </l:LoginCheck.isLogin>
           </l:LoginCheck>
-          <If sap:VirtualizedContainerService.HintSize="549,679" sap2010:WorkflowViewState.IdRef="If_4">
+          <If sap:VirtualizedContainerService.HintSize="549,731" sap2010:WorkflowViewState.IdRef="If_4">
             <If.Condition>
               <InArgument x:TypeArguments="x:Boolean">
                 <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_42">isLogin</CSharpValue>
@@ -390,13 +390,13 @@
               </Sequence>
             </If.Then>
             <If.Else>
-              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,442" sap2010:WorkflowViewState.IdRef="Sequence_13">
+              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,494" sap2010:WorkflowViewState.IdRef="Sequence_13">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <l:Login sap:VirtualizedContainerService.HintSize="416,378" sap2010:WorkflowViewState.IdRef="Login_1">
+                <l:Login isLoginSuccessful="{x:Null}" sap:VirtualizedContainerService.HintSize="416,430" sap2010:WorkflowViewState.IdRef="Login_1">
                   <l:Login.Browser>
                     <InArgument x:TypeArguments="x:String">
                       <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_43">Browser</CSharpValue>
@@ -431,6 +431,7 @@
               </Sequence>
             </If.Else>
           </If>
+          <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="549,127" sap2010:WorkflowViewState.IdRef="Delay_1" />
           <l:ContactUsLib sap:VirtualizedContainerService.HintSize="549,439" sap2010:WorkflowViewState.IdRef="ContactUsLib_1">
             <l:ContactUsLib.Browser>
               <InArgument x:TypeArguments="x:String">
@@ -468,7 +469,8 @@
               </InArgument>
             </l:ContactUsLib.suiteIdLocal>
           </l:ContactUsLib>
-          <l:Logout sap:VirtualizedContainerService.HintSize="334,195" sap2010:WorkflowViewState.IdRef="Logout_1">
+          <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="549,127" sap2010:WorkflowViewState.IdRef="Delay_2" />
+          <l:Logout sap:VirtualizedContainerService.HintSize="549,222" sap2010:WorkflowViewState.IdRef="Logout_1">
             <l:Logout.Browser>
               <InArgument x:TypeArguments="x:String">
                 <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_50">Browser</CSharpValue>

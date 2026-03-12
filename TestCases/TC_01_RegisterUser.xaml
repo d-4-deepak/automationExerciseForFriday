@@ -160,7 +160,7 @@
       <AssemblyReference>LibraryForTenTabs_Studio.Generated.TypedDataTable1</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="811,3601" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="833,3959" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_dataTable" />
       <Variable x:TypeArguments="x:String" Name="mrOrMrs" />
@@ -186,9 +186,9 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="515,3578" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="515,3936" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="513,2889" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="513,3247" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -474,7 +474,7 @@
               </InArgument>
             </ui:LogMessage.Message>
           </ui:LogMessage>
-          <l:Register sap:VirtualizedContainerService.HintSize="479,1054" sap2010:WorkflowViewState.IdRef="Register_1">
+          <l:Register sap:VirtualizedContainerService.HintSize="479,1063" sap2010:WorkflowViewState.IdRef="Register_1">
             <l:Register.Browser>
               <InArgument x:TypeArguments="x:String">
                 <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_41">Browser</CSharpValue>
@@ -571,6 +571,24 @@
               </InArgument>
             </l:Register.zipCode>
           </l:Register>
+          <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="479,127" sap2010:WorkflowViewState.IdRef="Delay_1" />
+          <l:Logout sap:VirtualizedContainerService.HintSize="479,222" sap2010:WorkflowViewState.IdRef="Logout_1">
+            <l:Logout.Browser>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_48">Browser</CSharpValue>
+              </InArgument>
+            </l:Logout.Browser>
+            <l:Logout.reportIdLocal>
+              <InArgument x:TypeArguments="x:Int32">
+                <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_50">reportIdLocal</CSharpValue>
+              </InArgument>
+            </l:Logout.reportIdLocal>
+            <l:Logout.suiteIdLocal>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_49">suiteIdLocal</CSharpValue>
+              </InArgument>
+            </l:Logout.suiteIdLocal>
+          </l:Logout>
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
