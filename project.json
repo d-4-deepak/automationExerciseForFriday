@@ -4,9 +4,10 @@
   "description": "Test Automation Project",
   "main": "Main.xaml",
   "dependencies": {
-    "LibraryForTenTabs": "[1.0.25]",
+    "LibraryForTenTabs": "[1.0.45]",
     "RecorderForTestCases": "[1.0.6]",
     "UiPath.GSuite.Activities": "[3.7.10]",
+    "UiPath.IntegrationService.Activities": "[1.22.0]",
     "UiPath.System.Activities": "[25.12.0-preview]",
     "UiPath.Testing.Activities": "[25.10.0]"
   },
@@ -110,45 +111,101 @@
       },
       {
         "editingStatus": "InProgress",
-        "testCaseId": "3b285aff-3c18-4909-a634-833099231ec5",
-        "testCaseType": "TestCase",
-        "executionTemplateInvokeIsolated": false,
-        "fileName": "TestCases\\TC_06_ContactUsForm.xaml"
-      },
-      {
-        "editingStatus": "InProgress",
-        "testCaseId": "3b099bfd-e2ac-4480-8087-0f8e9666d583",
-        "testCaseType": "TestCase",
-        "executionTemplateInvokeIsolated": false,
-        "fileName": "TestCases\\TC_07_VerifyTestCasesPage.xaml"
-      },
-      {
-        "editingStatus": "InProgress",
         "testCaseId": "b2b97305-8dfd-4e0d-b673-6b22728bacb7",
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
-        "fileName": "TestCases\\TC_08_SearchProducts.xaml"
+        "fileName": "TestCases\\TC_08_Login+SearchProduct+verify+Logout.xaml"
       },
       {
         "editingStatus": "InProgress",
         "testCaseId": "37a90208-3733-44d5-8891-a410bdbaebf4",
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
-        "fileName": "TestCases\\TC_09_AddProductToCart.xaml"
+        "fileName": "TestCases\\TC_09_login+search+addToCart+logout.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "3b099bfd-e2ac-4480-8087-0f8e9666d583",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "TestCases\\TC_07_Login+VerifyTestCases+Logout.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "3b285aff-3c18-4909-a634-833099231ec5",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "TestCases\\TC_06_Login_ContactUs+logout.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "0a97ab5b-a53c-476f-803f-03988d8a9c4d",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "TestCases\\TC_11_Login+Subscription+Logout.xaml"
       },
       {
         "editingStatus": "InProgress",
         "testCaseId": "0e05be54-b1f8-4eab-afc9-c9555732b065",
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
-        "fileName": "TestCases\\TC_10_CheckoutProduct.xaml"
+        "fileName": "TestCases\\TC_10_login+search+addTocart+checkout+logout.xaml"
       },
       {
         "editingStatus": "InProgress",
-        "testCaseId": "ef30c9f8-c8c9-4fec-b55b-d58bc5d96463",
+        "testCaseId": "786d0a2f-a1a5-402a-a657-6ab4285cdf5b",
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
-        "fileName": "TestCases\\TC_11_RemoveProductFromCart.xaml"
+        "fileName": "TestCases\\TC_13_Login+AddReview+Logout.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "30a1db57-b09f-492f-b181-b1ec59446785",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "TestCases\\TC_12_AddToCart+Login+Logout.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "69ca5101-b1f1-405b-8513-6e318a457598",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "TestCases\\TC_14_AddTocart+Register+Logout.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "7ed5a922-a8cb-4ea2-9e88-f6dfb504af79",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "TestCases\\TC_15_login+ApiPageVisibility+logout.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "1ff20fdc-d6cf-4683-99d3-02de9bf40001",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "TestCases\\TC_16_DD_Log+Sear+Add2Cart+Checkout+Logout.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "162e55c8-2b4f-42a7-948b-08af13d7d8c4",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "TestCases\\TC_17_ScrollUp_Check.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "77d0b2db-4847-4986-b11c-a5a9a46a0445",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "TestCases\\TC_18_LoginWithInvalidCred_JiraReport.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "7e072af8-c6e0-401d-9b6a-5ca1db3ce888",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "TestCases\\EndToEnd_Test.xaml"
       }
     ],
     "saveToCloud": false

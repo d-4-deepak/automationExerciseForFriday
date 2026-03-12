@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Chrome Automation Exercise - Checkout",
+  "Type": "App",
+  "Id": "3ZKlrarSrEmR7DEcTsm-bA",
+  "Reference": "QVSvyFUrfkGZUFLUcd8YJQ/3ZKlrarSrEmR7DEcTsm-bA",
+  "Created": "2026-03-12T04:39:25.6906184Z",
+  "Updated": "2026-03-12T04:39:25.6906184Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.1.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

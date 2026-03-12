@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Kk4URPPFFUKtBnnKHfJ9IA" Reference="QVSvyFUrfkGZUFLUcd8YJQ/Ly8z5Vyus0Ce6dw_tkuW3A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="automationexercise.com/view_cart" CVScreenId="242aea96-7381-4004-a0ca-b26609e7f8c3" DesignTimeRectangle="641, 125, 57, 20" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname=' Home' tag='A' /&gt;" Guid="ca19b87a-85b6-45b4-beed-cf89ebf86907" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
+      <TargetAnchorable.ScopeSelectorArgument>
+        <p:InArgument x:TypeArguments="x:String">
+          <p:CSharpValue x:TypeArguments="x:String">"&lt;html app='" + Browser + "' title='Automation Exercise - Checkout' /&gt;"</p:CSharpValue>
+        </p:InArgument>
+      </TargetAnchorable.ScopeSelectorArgument>
+      <imageRef attrName="InformativeScreenshot" originalValue="bb00beb8b66965c8497fdd8f8551f238.jpg" xmlns="">0hx7BuIp0HkSeZy0Se2gb_w</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
