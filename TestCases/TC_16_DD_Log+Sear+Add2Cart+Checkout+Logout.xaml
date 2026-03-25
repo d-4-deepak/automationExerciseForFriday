@@ -1,13 +1,9 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="TC_DD_Log_Sear_Add2Cart_Checkout_Logout" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:c="clr-namespace:CustomTestReporter;assembly=CustomTestReporter" xmlns:l="clr-namespace:LibraryForTenTabs;assembly=LibraryForTenTabs" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:ra="clr-namespace:ReporterForUiPath.Activities;assembly=ReporterForUiPath.Activities" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:uascw="clr-namespace:UiPath.Activities.System.Compression.Workflow;assembly=UiPath.System.Activities" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugage="clr-namespace:UiPath.GSuite.Activities.Gmail.Enums;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="TC_DD_Log_Sear_Add2Cart_Checkout_Logout" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:l="clr-namespace:LibraryForTenTabs;assembly=LibraryForTenTabs" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:ra="clr-namespace:ReporterForUiPath.Activities;assembly=ReporterForUiPath.Activities" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:uascw="clr-namespace:UiPath.Activities.System.Compression.Workflow;assembly=UiPath.System.Activities" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugage="clr-namespace:UiPath.GSuite.Activities.Gmail.Enums;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="rowIdx" Type="InArgument(x:Int32)" />
     <x:Property Name="suiteIdLocal" Type="OutArgument(x:String)" />
     <x:Property Name="reportIdLocal" Type="InArgument(x:Int32)" />
-    <x:Property Name="Browser" Type="InArgument(x:String)" />
   </x:Members>
-  <this:TC_DD_Log_Sear_Add2Cart_Checkout_Logout.Browser>
-    <InArgument x:TypeArguments="x:String" />
-  </this:TC_DD_Log_Sear_Add2Cart_Checkout_Logout.Browser>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
@@ -182,7 +178,7 @@
       <AssemblyReference>CAB95E1C562_issue_at.hzJim2leBWM1HE6XpIT1Pe2</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="585,7824" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="829,7520" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_dataTable" />
       <Variable x:TypeArguments="x:Int32" Name="int_reportID" />
@@ -197,21 +193,14 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="585,7801" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="585,7497" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="583,4790" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="583,4738" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <c:StartRec EnableRecording="True" FileName="TC_16_DD_Log_Sear_Add2cart_Checkout_Logout" sap:VirtualizedContainerService.HintSize="549,231" sap2010:WorkflowViewState.IdRef="StartRec_1">
-            <c:StartRec.RecordingFolder>
-              <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_25">@"C:\Users\TX\Documents\UiPath\AutomationExerciseProjectForFriday\Reports"</CSharpValue>
-              </InArgument>
-            </c:StartRec.RecordingFolder>
-          </c:StartRec>
           <Assign sap:VirtualizedContainerService.HintSize="549,179" sap2010:WorkflowViewState.IdRef="Assign_3">
             <Assign.To>
               <OutArgument x:TypeArguments="x:Int32">
@@ -280,9 +269,9 @@
               </OutArgument>
             </l:GetExcelData.dt_dataTable>
           </l:GetExcelData>
-          <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="549,3604" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+          <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="549,3783" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
             <ui:InterruptibleWhile.Body>
-              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="513,3478" sap2010:WorkflowViewState.IdRef="Sequence_13">
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="513,3657" sap2010:WorkflowViewState.IdRef="Sequence_13">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:String" Name="searchString" />
                   <Variable x:TypeArguments="x:String" Name="password" />
@@ -295,6 +284,7 @@
                   <Variable x:TypeArguments="x:String" Name="expiryYear" />
                   <Variable x:TypeArguments="x:String" Name="expiryMonth" />
                   <Variable x:TypeArguments="x:Boolean" Name="isLogin" />
+                  <Variable x:TypeArguments="x:String" Name="Browser" />
                 </Sequence.Variables>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -319,7 +309,7 @@
                       <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
                         <ui:AssignOperation.To>
                           <OutArgument x:TypeArguments="x:String">
-                            <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_11">Browser</CSharpReference>
+                            <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_23">Browser</CSharpReference>
                           </OutArgument>
                         </ui:AssignOperation.To>
                         <ui:AssignOperation.Value>
@@ -463,7 +453,7 @@
                     </OutArgument>
                   </l:LoginCheck.isLogin>
                 </l:LoginCheck>
-                <If sap:VirtualizedContainerService.HintSize="479,806" sap2010:WorkflowViewState.IdRef="If_4">
+                <If sap:VirtualizedContainerService.HintSize="479,858" sap2010:WorkflowViewState.IdRef="If_4">
                   <If.Condition>
                     <InArgument x:TypeArguments="x:Boolean">
                       <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_40">isLogin</CSharpValue>
@@ -479,14 +469,14 @@
                     </Sequence>
                   </If.Then>
                   <If.Else>
-                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,569" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,621" sap2010:WorkflowViewState.IdRef="Sequence_15">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="416,127" sap2010:WorkflowViewState.IdRef="Delay_2" />
-                      <l:Login isLoginSuccessful="{x:Null}" sap:VirtualizedContainerService.HintSize="416,378" sap2010:WorkflowViewState.IdRef="Login_1">
+                      <l:Login isLoginSuccessful="{x:Null}" sap:VirtualizedContainerService.HintSize="416,430" sap2010:WorkflowViewState.IdRef="Login_1">
                         <l:Login.Browser>
                           <InArgument x:TypeArguments="x:String">
                             <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_41">Browser</CSharpValue>
@@ -606,7 +596,7 @@
                   </l:checkOut.suiteIdLocal>
                 </l:checkOut>
                 <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="479,127" sap2010:WorkflowViewState.IdRef="Delay_5" />
-                <l:Logout sap:VirtualizedContainerService.HintSize="479,222" sap2010:WorkflowViewState.IdRef="Logout_1">
+                <l:Logout sap:VirtualizedContainerService.HintSize="479,231" sap2010:WorkflowViewState.IdRef="Logout_1">
                   <l:Logout.Browser>
                     <InArgument x:TypeArguments="x:String">
                       <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_62">Browser</CSharpValue>
@@ -623,6 +613,13 @@
                     </InArgument>
                   </l:Logout.suiteIdLocal>
                 </l:Logout>
+                <l:RedirectToHomePage sap:VirtualizedContainerService.HintSize="479,118" sap2010:WorkflowViewState.IdRef="RedirectToHomePage_1">
+                  <l:RedirectToHomePage.Browser>
+                    <InArgument x:TypeArguments="x:String">
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_66">Browser</CSharpValue>
+                    </InArgument>
+                  </l:RedirectToHomePage.Browser>
+                </l:RedirectToHomePage>
               </Sequence>
             </ui:InterruptibleWhile.Body>
             <ui:InterruptibleWhile.Condition>
@@ -655,19 +652,19 @@
         </Catch>
       </TryCatch.Catches>
       <TryCatch.Finally>
-        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="583,2608" sap2010:WorkflowViewState.IdRef="Sequence_5">
+        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="583,2356" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="SendMail" sap:VirtualizedContainerService.HintSize="549,2322" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <Sequence DisplayName="SendMail" sap:VirtualizedContainerService.HintSize="549,2292" sap2010:WorkflowViewState.IdRef="Sequence_7">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <If sap:VirtualizedContainerService.HintSize="515,2222" sap2010:WorkflowViewState.IdRef="If_2">
+            <If sap:VirtualizedContainerService.HintSize="515,2201" sap2010:WorkflowViewState.IdRef="If_2">
               <If.Condition>
                 <InArgument x:TypeArguments="x:Boolean">
                   <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_24">int_reportID==0</CSharpValue>
@@ -680,7 +677,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="513,1854" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="513,1833" sap2010:WorkflowViewState.IdRef="Sequence_8">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -799,7 +796,7 @@
                       </scg:List>
                     </uascw:CompressFiles.ContentToArchive>
                   </uascw:CompressFiles>
-                  <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" ArgumentAttachments="{x:Null}" AttachmentPaths="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="UseExisting" AuthScopesInvalid="False" ConnectionId="31fcc9d3-e2e0-452e-9aa6-5949170d1867" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="479,530" sap2010:WorkflowViewState.IdRef="SendEmailConnections_1" Importance="Normal" InputType="HTML" SaveAsDraft="True" Subject="Test case execution report" UseConnectionService="True">
+                  <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" ArgumentAttachments="{x:Null}" AttachmentPaths="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="UseExisting" AuthScopesInvalid="False" ConnectionId="31fcc9d3-e2e0-452e-9aa6-5949170d1867" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="479,509" sap2010:WorkflowViewState.IdRef="SendEmailConnections_1" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="Test case execution report" UseConnectionService="True">
                     <uga:SendEmailConnections.Attachments>
                       <InArgument x:TypeArguments="scg:IEnumerable(upr:IResource)">
                         <CSharpValue x:TypeArguments="scg:IEnumerable(upr:IResource)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_20">new List&lt;UiPath.Platform.ResourceHandling.IResource&gt; { UiPath.Platform.ResourceHandling.LocalResource.FromPath(zipPath) }</CSharpValue>
@@ -826,7 +823,7 @@
                     </uga:SendEmailConnections.InputTypeBackup>
                     <uga:SendEmailConnections.To>
                       <InArgument x:TypeArguments="scg:IEnumerable(x:String)">
-                        <CSharpValue x:TypeArguments="scg:IEnumerable(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_18">new string[]{"prem.kumar@testingxperts.com","deepak.gupta@testingxperts.com"}</CSharpValue>
+                        <CSharpValue x:TypeArguments="scg:IEnumerable(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_67">new string[]{"dg934257@gmail.com"}</CSharpValue>
                       </InArgument>
                     </uga:SendEmailConnections.To>
                   </uga:SendEmailConnections>
@@ -850,13 +847,6 @@
               </If.Else>
             </If>
           </Sequence>
-          <c:StopRec EnableRecording="False" FileName="fileName" sap:VirtualizedContainerService.HintSize="549,222" sap2010:WorkflowViewState.IdRef="StopRec_1">
-            <c:StopRec.RecordingFolder>
-              <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">@"C:\Users\TX\Documents\UiPath\automationExerciseProject\Recordings"</CSharpValue>
-              </InArgument>
-            </c:StopRec.RecordingFolder>
-          </c:StopRec>
         </Sequence>
       </TryCatch.Finally>
     </TryCatch>

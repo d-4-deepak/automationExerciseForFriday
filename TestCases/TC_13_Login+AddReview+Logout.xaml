@@ -1,13 +1,9 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="TC_13_Login_AddReview_Logout" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:c="clr-namespace:CustomTestReporter;assembly=CustomTestReporter" xmlns:l="clr-namespace:LibraryForTenTabs;assembly=LibraryForTenTabs" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:ra="clr-namespace:ReporterForUiPath.Activities;assembly=ReporterForUiPath.Activities" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:uascw="clr-namespace:UiPath.Activities.System.Compression.Workflow;assembly=UiPath.System.Activities" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugage="clr-namespace:UiPath.GSuite.Activities.Gmail.Enums;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="TC_13_Login_AddReview_Logout" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:l="clr-namespace:LibraryForTenTabs;assembly=LibraryForTenTabs" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:ra="clr-namespace:ReporterForUiPath.Activities;assembly=ReporterForUiPath.Activities" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:uascw="clr-namespace:UiPath.Activities.System.Compression.Workflow;assembly=UiPath.System.Activities" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugage="clr-namespace:UiPath.GSuite.Activities.Gmail.Enums;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="rowIdx" Type="InArgument(x:Int32)" />
     <x:Property Name="suiteIdLocal" Type="OutArgument(x:String)" />
     <x:Property Name="reportIdLocal" Type="InArgument(x:Int32)" />
-    <x:Property Name="Browser" Type="InArgument(x:String)" />
   </x:Members>
-  <this:TC_13_Login_AddReview_Logout.Browser>
-    <InArgument x:TypeArguments="x:String" />
-  </this:TC_13_Login_AddReview_Logout.Browser>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
@@ -178,9 +174,11 @@
       <AssemblyReference>System.Collections.Specialized</AssemblyReference>
       <AssemblyReference>System.Text.Json</AssemblyReference>
       <AssemblyReference>System.Windows.Forms.Design</AssemblyReference>
+      <AssemblyReference>LibraryForTenTabs_Studio.Generated.TypedDataTable1</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="833,5620" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="745,5337" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_dataTable" />
       <Variable x:TypeArguments="x:Int32" Name="int_reportID" />
@@ -195,28 +193,22 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="585,5597" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="585,5314" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="583,2586" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="583,2534" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="password" />
             <Variable x:TypeArguments="x:String" Name="email" />
             <Variable x:TypeArguments="x:String" Name="name" />
             <Variable x:TypeArguments="x:String" Name="cvc" />
             <Variable x:TypeArguments="x:String" Name="addComment" />
+            <Variable x:TypeArguments="x:String" Name="Browser" />
           </Sequence.Variables>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <c:StartRec EnableRecording="True" FileName="fileName" sap:VirtualizedContainerService.HintSize="549,231" sap2010:WorkflowViewState.IdRef="StartRec_1">
-            <c:StartRec.RecordingFolder>
-              <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_25">@"C:\Users\TX\Documents\UiPath\AutomationExerciseProjectForFriday\Reports"</CSharpValue>
-              </InArgument>
-            </c:StartRec.RecordingFolder>
-          </c:StartRec>
           <Assign sap:VirtualizedContainerService.HintSize="549,179" sap2010:WorkflowViewState.IdRef="Assign_3">
             <Assign.To>
               <OutArgument x:TypeArguments="x:Int32">
@@ -291,7 +283,7 @@
                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
                   <ui:AssignOperation.To>
                     <OutArgument x:TypeArguments="x:String">
-                      <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_11">Browser</CSharpReference>
+                      <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_25">Browser</CSharpReference>
                     </OutArgument>
                   </ui:AssignOperation.To>
                   <ui:AssignOperation.Value>
@@ -320,7 +312,7 @@
                   </ui:AssignOperation.To>
                   <ui:AssignOperation.Value>
                     <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_30">dt_dataTable.Rows[rowIdx]["email"].ToString()</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_54">dt_dataTable.Rows[rowIdx]["email"].ToString()</CSharpValue>
                     </InArgument>
                   </ui:AssignOperation.Value>
                 </ui:AssignOperation>
@@ -351,7 +343,7 @@
               </scg:List>
             </ui:MultipleAssign.AssignOperations>
           </ui:MultipleAssign>
-          <l:Login sap:VirtualizedContainerService.HintSize="549,387" sap2010:WorkflowViewState.IdRef="Login_1">
+          <l:Login isLoginSuccessful="{x:Null}" sap:VirtualizedContainerService.HintSize="549,439" sap2010:WorkflowViewState.IdRef="Login_1">
             <l:Login.Browser>
               <InArgument x:TypeArguments="x:String">
                 <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_38">Browser</CSharpValue>
@@ -416,7 +408,7 @@
             </l:AddReview.suiteIdLocal>
           </l:AddReview>
           <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="549,127" sap2010:WorkflowViewState.IdRef="Delay_1" />
-          <l:Logout sap:VirtualizedContainerService.HintSize="549,222" sap2010:WorkflowViewState.IdRef="Logout_1">
+          <l:Logout sap:VirtualizedContainerService.HintSize="549,231" sap2010:WorkflowViewState.IdRef="Logout_1">
             <l:Logout.Browser>
               <InArgument x:TypeArguments="x:String">
                 <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_50">Browser</CSharpValue>
@@ -433,6 +425,13 @@
               </InArgument>
             </l:Logout.suiteIdLocal>
           </l:Logout>
+          <l:RedirectToHomePage sap:VirtualizedContainerService.HintSize="549,118" sap2010:WorkflowViewState.IdRef="RedirectToHomePage_1">
+            <l:RedirectToHomePage.Browser>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_53">Browser</CSharpValue>
+              </InArgument>
+            </l:RedirectToHomePage.Browser>
+          </l:RedirectToHomePage>
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
@@ -459,13 +458,13 @@
         </Catch>
       </TryCatch.Catches>
       <TryCatch.Finally>
-        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="583,2608" sap2010:WorkflowViewState.IdRef="Sequence_5">
+        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="583,2377" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="SendMail" sap:VirtualizedContainerService.HintSize="549,2322" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <Sequence DisplayName="SendMail" sap:VirtualizedContainerService.HintSize="549,2313" sap2010:WorkflowViewState.IdRef="Sequence_7">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -654,13 +653,6 @@
               </If.Else>
             </If>
           </Sequence>
-          <c:StopRec EnableRecording="False" FileName="fileName" sap:VirtualizedContainerService.HintSize="549,222" sap2010:WorkflowViewState.IdRef="StopRec_1">
-            <c:StopRec.RecordingFolder>
-              <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">@"C:\Users\TX\Documents\UiPath\automationExerciseProject\Recordings"</CSharpValue>
-              </InArgument>
-            </c:StopRec.RecordingFolder>
-          </c:StopRec>
         </Sequence>
       </TryCatch.Finally>
     </TryCatch>

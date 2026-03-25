@@ -180,7 +180,7 @@
       <AssemblyReference>CAB95E1C562_issue_at.hzJim2leBWM1HE6XpIT1Pe2</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="585,5813" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="830,5709" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_dataTable" />
       <Variable x:TypeArguments="x:Int32" Name="int_reportID" />
@@ -195,28 +195,21 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="585,5790" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="585,5686" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="583,2473" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="583,2369" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
-            <Variable x:TypeArguments="x:String" Name="Browser" />
             <Variable x:TypeArguments="x:String" Name="password" />
             <Variable x:TypeArguments="x:String" Name="email" />
             <Variable x:TypeArguments="x:String" Name="name" />
             <Variable x:TypeArguments="x:Boolean" Name="isLogin" />
+            <Variable x:TypeArguments="x:String" Name="Browser" />
           </Sequence.Variables>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <c:StartRec EnableRecording="True" FileName="fileName" sap:VirtualizedContainerService.HintSize="549,231" sap2010:WorkflowViewState.IdRef="StartRec_1">
-            <c:StartRec.RecordingFolder>
-              <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_40">@"C:\Users\TX\Documents\UiPath\AutomationExerciseProjectForFriday\Recordings"</CSharpValue>
-              </InArgument>
-            </c:StartRec.RecordingFolder>
-          </c:StartRec>
           <Assign sap:VirtualizedContainerService.HintSize="549,179" sap2010:WorkflowViewState.IdRef="Assign_3">
             <Assign.To>
               <OutArgument x:TypeArguments="x:Int32">
@@ -291,7 +284,7 @@
                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
                   <ui:AssignOperation.To>
                     <OutArgument x:TypeArguments="x:String">
-                      <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_10">Browser</CSharpReference>
+                      <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_16">Browser</CSharpReference>
                     </OutArgument>
                   </ui:AssignOperation.To>
                   <ui:AssignOperation.Value>
@@ -351,7 +344,7 @@
               </OutArgument>
             </l:LoginCheck.isLogin>
           </l:LoginCheck>
-          <If sap:VirtualizedContainerService.HintSize="549,862" sap2010:WorkflowViewState.IdRef="If_4">
+          <If sap:VirtualizedContainerService.HintSize="549,871" sap2010:WorkflowViewState.IdRef="If_4">
             <If.Condition>
               <InArgument x:TypeArguments="x:Boolean">
                 <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_31">isLogin</CSharpValue>
@@ -423,6 +416,13 @@
               </Sequence>
             </If.Else>
           </If>
+          <l:RedirectToHomePage sap:VirtualizedContainerService.HintSize="549,118" sap2010:WorkflowViewState.IdRef="RedirectToHomePage_1">
+            <l:RedirectToHomePage.Browser>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_48">Browser</CSharpValue>
+              </InArgument>
+            </l:RedirectToHomePage.Browser>
+          </l:RedirectToHomePage>
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>

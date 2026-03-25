@@ -121,7 +121,7 @@
       <AssemblyReference>CAB95E1C562_issue_at.hzJim2leBWM1HE6XpIT1Pe2</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="833,2782" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="829,2782" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="ReportName" />
       <Variable x:TypeArguments="x:String" Name="reportLocation" />
@@ -302,7 +302,7 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:GetSecret TimeoutMS="{x:Null}" AssetName="JiraAPI" DisplayName="Get Secret" FolderPath="premkumar78206@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="484,186" sap2010:WorkflowViewState.IdRef="GetSecret_2">
+      <ui:GetSecret TimeoutMS="{x:Null}" AssetName="jirademoToken" DisplayName="Get Secret" FolderPath="dg934257@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="484,186" sap2010:WorkflowViewState.IdRef="GetSecret_2">
         <ui:GetSecret.Secret>
           <OutArgument x:TypeArguments="ss:SecureString">
             <CSharpReference x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpReference`1_16">JiraApiToken</CSharpReference>

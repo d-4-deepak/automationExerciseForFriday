@@ -168,7 +168,7 @@
       <AssemblyReference>CAB95E1C562_issue_at.hzJim2leBWM1HE6XpIT1Pe2</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="833,2932" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="830,3059" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_dataTable" />
       <Variable x:TypeArguments="x:Boolean" Name="isLogin" />
@@ -178,16 +178,16 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="515,2909" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="515,3036" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="513,2220" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="513,2347" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
-            <Variable x:TypeArguments="x:String" Name="Browser" />
             <Variable x:TypeArguments="x:String" Name="password" />
             <Variable x:TypeArguments="x:String" Name="email" />
             <Variable x:TypeArguments="x:String" Name="name" />
             <Variable x:TypeArguments="x:String" Name="mrOrMrs" />
             <Variable x:TypeArguments="x:Boolean" Name="loginStatus" />
+            <Variable x:TypeArguments="x:String" Name="Browser" />
           </Sequence.Variables>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -263,7 +263,7 @@
                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
                   <ui:AssignOperation.To>
                     <OutArgument x:TypeArguments="x:String">
-                      <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">Browser</CSharpReference>
+                      <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_10">Browser</CSharpReference>
                     </OutArgument>
                   </ui:AssignOperation.To>
                   <ui:AssignOperation.Value>
@@ -356,7 +356,7 @@
             </l:Login.suiteIdLocal>
           </l:Login>
           <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="479,127" sap2010:WorkflowViewState.IdRef="Delay_1" />
-          <l:Logout sap:VirtualizedContainerService.HintSize="479,222" sap2010:WorkflowViewState.IdRef="Logout_1">
+          <l:Logout sap:VirtualizedContainerService.HintSize="479,231" sap2010:WorkflowViewState.IdRef="Logout_1">
             <l:Logout.Browser>
               <InArgument x:TypeArguments="x:String">
                 <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_23">Browser</CSharpValue>
@@ -373,6 +373,13 @@
               </InArgument>
             </l:Logout.suiteIdLocal>
           </l:Logout>
+          <l:RedirectToHomePage sap:VirtualizedContainerService.HintSize="479,118" sap2010:WorkflowViewState.IdRef="RedirectToHomePage_1">
+            <l:RedirectToHomePage.Browser>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_26">Browser</CSharpValue>
+              </InArgument>
+            </l:RedirectToHomePage.Browser>
+          </l:RedirectToHomePage>
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
