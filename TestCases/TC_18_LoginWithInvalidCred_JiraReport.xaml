@@ -184,8 +184,9 @@
       <AssemblyReference>UiPath.CodedWorkflows</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="745,9401" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="745,7992" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="failedScreenShotPath" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_dataTable" />
       <Variable x:TypeArguments="x:Int32" Name="int_reportID" />
       <Variable x:TypeArguments="x:String" Name="folderPath" />
@@ -209,9 +210,9 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="653,9378" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="653,7969" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="651,4410" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="651,2709" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -381,7 +382,7 @@
               </OutArgument>
             </l:LoginCheck.isLogin>
           </l:LoginCheck>
-          <If sap:VirtualizedContainerService.HintSize="617,1102" sap2010:WorkflowViewState.IdRef="If_4">
+          <If sap:VirtualizedContainerService.HintSize="617,1145" sap2010:WorkflowViewState.IdRef="If_4">
             <If.Condition>
               <InArgument x:TypeArguments="x:Boolean">
                 <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_32">isLogin</CSharpValue>
@@ -404,18 +405,23 @@
               </Sequence>
             </If.Then>
             <If.Else>
-              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,725" sap2010:WorkflowViewState.IdRef="Sequence_13">
+              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,777" sap2010:WorkflowViewState.IdRef="Sequence_13">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <l:Login sap:VirtualizedContainerService.HintSize="416,543" sap2010:WorkflowViewState.IdRef="Login_1">
+                <l:Login sap:VirtualizedContainerService.HintSize="416,595" sap2010:WorkflowViewState.IdRef="Login_1">
                   <l:Login.Browser>
                     <InArgument x:TypeArguments="x:String">
                       <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_34">Browser</CSharpValue>
                     </InArgument>
                   </l:Login.Browser>
+                  <l:Login.FailedScreenShotPath>
+                    <OutArgument x:TypeArguments="x:String">
+                      <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_56">failedScreenShotPath</CSharpReference>
+                    </OutArgument>
+                  </l:Login.FailedScreenShotPath>
                   <l:Login.email>
                     <InArgument x:TypeArguments="x:String">
                       <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_37">email</CSharpValue>
@@ -467,354 +473,6 @@
               </Sequence>
             </If.Else>
           </If>
-          <If sap:VirtualizedContainerService.HintSize="617,1692" sap2010:WorkflowViewState.IdRef="If_2">
-            <If.Condition>
-              <InArgument x:TypeArguments="x:Boolean">
-                <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_24">int_reportID==0</CSharpValue>
-              </InArgument>
-            </If.Condition>
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <If.Then>
-              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="513,1315" sap2010:WorkflowViewState.IdRef="Sequence_8">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="479,215" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
-                  <ui:MultipleAssign.AssignOperations>
-                    <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
-                        <ui:AssignOperation.To>
-                          <OutArgument x:TypeArguments="x:String">
-                            <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">folderPath</CSharpReference>
-                          </OutArgument>
-                        </ui:AssignOperation.To>
-                        <ui:AssignOperation.Value>
-                          <InArgument x:TypeArguments="x:String">
-                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_22">@"C:\Users\TX\Documents\UiPath\AutomationExerciseProjectForFriday\Reports"</CSharpValue>
-                          </InArgument>
-                        </ui:AssignOperation.Value>
-                      </ui:AssignOperation>
-                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
-                        <ui:AssignOperation.To>
-                          <OutArgument x:TypeArguments="si:DirectoryInfo">
-                            <CSharpReference x:TypeArguments="si:DirectoryInfo" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">dirInfo</CSharpReference>
-                          </OutArgument>
-                        </ui:AssignOperation.To>
-                        <ui:AssignOperation.Value>
-                          <InArgument x:TypeArguments="si:DirectoryInfo">
-                            <CSharpValue x:TypeArguments="si:DirectoryInfo" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">new System.IO.DirectoryInfo(folderPath)</CSharpValue>
-                          </InArgument>
-                        </ui:AssignOperation.Value>
-                      </ui:AssignOperation>
-                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
-                        <ui:AssignOperation.To>
-                          <OutArgument x:TypeArguments="si:DirectoryInfo">
-                            <CSharpReference x:TypeArguments="si:DirectoryInfo" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">latestFolder</CSharpReference>
-                          </OutArgument>
-                        </ui:AssignOperation.To>
-                        <ui:AssignOperation.Value>
-                          <InArgument x:TypeArguments="si:DirectoryInfo">
-                            <CSharpValue x:TypeArguments="si:DirectoryInfo" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">dirInfo.GetDirectories().OrderByDescending(d =&gt; d.CreationTime).FirstOrDefault()</CSharpValue>
-                          </InArgument>
-                        </ui:AssignOperation.Value>
-                      </ui:AssignOperation>
-                    </scg:List>
-                  </ui:MultipleAssign.AssignOperations>
-                </ui:MultipleAssign>
-                <If sap:VirtualizedContainerService.HintSize="479,611" sap2010:WorkflowViewState.IdRef="If_3">
-                  <If.Condition>
-                    <InArgument x:TypeArguments="x:Boolean">
-                      <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">latestFolder != null</CSharpValue>
-                    </InArgument>
-                  </If.Condition>
-                  <If.Then>
-                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,234" sap2010:WorkflowViewState.IdRef="Sequence_10">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <Assign sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="Assign_2">
-                        <Assign.To>
-                          <OutArgument x:TypeArguments="x:String">
-                            <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">latestFolderPath</CSharpReference>
-                          </OutArgument>
-                        </Assign.To>
-                        <Assign.Value>
-                          <InArgument x:TypeArguments="x:String">
-                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">latestFolder.FullName</CSharpValue>
-                          </InArgument>
-                        </Assign.Value>
-                      </Assign>
-                    </Sequence>
-                  </If.Then>
-                  <If.Else>
-                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,234" sap2010:WorkflowViewState.IdRef="Sequence_11">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info">
-                        <ui:LogMessage.Message>
-                          <InArgument x:TypeArguments="x:Object">
-                            <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">"report folder blank"</CSharpValue>
-                          </InArgument>
-                        </ui:LogMessage.Message>
-                      </ui:LogMessage>
-                    </Sequence>
-                  </If.Else>
-                </If>
-                <Assign sap:VirtualizedContainerService.HintSize="479,179" sap2010:WorkflowViewState.IdRef="Assign_1">
-                  <Assign.To>
-                    <OutArgument x:TypeArguments="x:String">
-                      <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">zipPath</CSharpReference>
-                    </OutArgument>
-                  </Assign.To>
-                  <Assign.Value>
-                    <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">latestFolderPath + ".zip"</CSharpValue>
-                    </InArgument>
-                  </Assign.Value>
-                </Assign>
-                <uascw:CompressFiles CompressedFileInfo="{x:Null}" CompressedResource="{x:Null}" Password="{x:Null}" ResourcesToArchive="{x:Null}" SecurePassword="{x:Null}" AllowDuplicateContentNames="False" CodePage="Default" CompressionLevel="Normal" DisplayName="Compress/Zip Files" EncryptionAlgorithm="Classic" sap:VirtualizedContainerService.HintSize="479,246" sap2010:WorkflowViewState.IdRef="CompressFiles_1" OverrideExistingFile="True">
-                  <uascw:CompressFiles.CompressedFileName>
-                    <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17">zipPath</CSharpValue>
-                    </InArgument>
-                  </uascw:CompressFiles.CompressedFileName>
-                  <uascw:CompressFiles.ContentToArchive>
-                    <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
-                      <InArgument x:TypeArguments="x:String">
-                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">latestFolderPath</CSharpValue>
-                      </InArgument>
-                    </scg:List>
-                  </uascw:CompressFiles.ContentToArchive>
-                </uascw:CompressFiles>
-              </Sequence>
-            </If.Then>
-            <If.Else>
-              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="513,234" sap2010:WorkflowViewState.IdRef="Sequence_9">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="479,170" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Warn">
-                  <ui:LogMessage.Message>
-                    <InArgument x:TypeArguments="x:Object">
-                      <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_21">"Report not created for this Test Case"</CSharpValue>
-                    </InArgument>
-                  </ui:LogMessage.Message>
-                </ui:LogMessage>
-              </Sequence>
-            </If.Else>
-          </If>
-          <If sap:VirtualizedContainerService.HintSize="617,52" sap2010:WorkflowViewState.IdRef="If_5">
-            <If.Condition>
-              <InArgument x:TypeArguments="x:Boolean">
-                <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_41">loginStatus</CSharpValue>
-              </InArgument>
-            </If.Condition>
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <If.Then>
-              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,94" sap2010:WorkflowViewState.IdRef="Sequence_14">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-              </Sequence>
-            </If.Then>
-            <If.Else>
-              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,116" sap2010:WorkflowViewState.IdRef="Sequence_15">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="416,52" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-                  <ui:CommentOut.Body>
-                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="588,1628" sap2010:WorkflowViewState.IdRef="Sequence_22">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <Sequence DisplayName="JIRA" sap:VirtualizedContainerService.HintSize="554,1568" sap2010:WorkflowViewState.IdRef="Sequence_16">
-                        <Sequence.Variables>
-                          <Variable x:TypeArguments="ss:SecureString" Name="JiraApi" />
-                        </Sequence.Variables>
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <ui:GetSecret TimeoutMS="{x:Null}" AssetName="JiraAPIToken" DisplayName="Get Secret" FolderPath="dg934257@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="520,186" sap2010:WorkflowViewState.IdRef="GetSecret_1">
-                          <ui:GetSecret.Secret>
-                            <OutArgument x:TypeArguments="ss:SecureString">
-                              <CSharpReference x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpReference`1_22">JiraApi</CSharpReference>
-                            </OutArgument>
-                          </ui:GetSecret.Secret>
-                        </ui:GetSecret>
-                        <uja:JiraScope ClientID="{x:Null}" ClientSecret="{x:Null}" Connection="{x:Null}" ContinueOnError="{x:Null}" JiraConnection="{x:Null}" AuthenticationType="Api Token" DisplayName="Jira Scope" sap:VirtualizedContainerService.HintSize="520,1299" sap2010:WorkflowViewState.IdRef="JiraScope_1" ServerURL="https://testertests404.atlassian.net/" UserName="testertests404@gmail.com">
-                          <uja:JiraScope.ApiToken>
-                            <InArgument x:TypeArguments="ss:SecureString">
-                              <CSharpValue x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpValue`1_42">JiraApi</CSharpValue>
-                            </InArgument>
-                          </uja:JiraScope.ApiToken>
-                          <uja:JiraScope.Body>
-                            <ActivityAction x:TypeArguments="usa:IObjectContainer">
-                              <ActivityAction.Argument>
-                                <DelegateInArgument x:TypeArguments="usa:IObjectContainer" Name="ScopeActivity" />
-                              </ActivityAction.Argument>
-                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="486,1189" sap2010:WorkflowViewState.IdRef="Sequence_17">
-                                <Sequence.Variables>
-                                  <Variable x:TypeArguments="aj:Issue" Name="newBug" />
-                                  <Variable x:TypeArguments="aj:Issue[]" Name="numOfIsssues" />
-                                </Sequence.Variables>
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                                <uja:SearchIssuesUsingJQL ContinueOnError="{x:Null}" MaxResults="{x:Null}" DisplayName="Search Issues Using JQL" sap:VirtualizedContainerService.HintSize="452,122" sap2010:WorkflowViewState.IdRef="SearchIssuesUsingJQL_3" JQL="project = G4 AND summary ~ &quot;TC_19&quot;">
-                                  <uja:SearchIssuesUsingJQL.Issues>
-                                    <OutArgument x:TypeArguments="aj:Issue[]">
-                                      <CSharpReference x:TypeArguments="aj:Issue[]" sap2010:WorkflowViewState.IdRef="CSharpReference`1_26">numOfIsssues</CSharpReference>
-                                    </OutArgument>
-                                  </uja:SearchIssuesUsingJQL.Issues>
-                                  <uja:SearchIssuesUsingJQL.TelemetryProperties>
-                                    <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
-                                  </uja:SearchIssuesUsingJQL.TelemetryProperties>
-                                </uja:SearchIssuesUsingJQL>
-                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,179" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info">
-                                  <ui:LogMessage.Message>
-                                    <InArgument x:TypeArguments="x:Object">
-                                      <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_52">"Number of issues: " + numOfIsssues.Length.ToString()</CSharpValue>
-                                    </InArgument>
-                                  </ui:LogMessage.Message>
-                                </ui:LogMessage>
-                                <If sap:VirtualizedContainerService.HintSize="452,824" sap2010:WorkflowViewState.IdRef="If_6">
-                                  <If.Condition>
-                                    <InArgument x:TypeArguments="x:Boolean">
-                                      <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_57">numOfIsssues.Length&lt;=12</CSharpValue>
-                                    </InArgument>
-                                  </If.Condition>
-                                  <If.Then>
-                                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,596" sap2010:WorkflowViewState.IdRef="Sequence_18">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <uja:CreateIssue Components="{x:Null}" ContinueOnError="{x:Null}" CustomFields="{x:Null}" ParentIssueKey="{x:Null}" DisplayName="Create Issue" sap:VirtualizedContainerService.HintSize="416,269" sap2010:WorkflowViewState.IdRef="CreateIssue_1" IssueSummary="[TC_18] Login Failure - Invalid Credentials" IssueType="Bug" ProjectKey="G4">
-                                        <uja:CreateIssue.AdditionalFields>
-                                          <scg:Dictionary x:TypeArguments="x:String, InArgument" />
-                                        </uja:CreateIssue.AdditionalFields>
-                                        <uja:CreateIssue.Issue>
-                                          <OutArgument x:TypeArguments="aj:Issue">
-                                            <CSharpReference x:TypeArguments="aj:Issue" sap2010:WorkflowViewState.IdRef="CSharpReference`1_23">newBug</CSharpReference>
-                                          </OutArgument>
-                                        </uja:CreateIssue.Issue>
-                                        <uja:CreateIssue.IssueDescription>
-                                          <InArgument x:TypeArguments="x:String">
-                                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_56" xml:space="preserve">$"Test Case: TC_18 Login with Invalid Credentials Test\n" +
-$"Status: FAILED\n" +
-$"Execution Time: {DateTime.Now:dd MMM yyyy HH:mm}\n\n" +
-$"Environment: QA\n" +
-$"Application: Automation Exercise\n" +
-$"URL: https://automationexercise.com\n\n" +
-$"Automation Tool: UiPath\n" +
-$"Hybrid Test Framework\n" +
-$"Browser: {Browser}\n\n" +
-$"Steps Executed:\n" +
-$"1. Launch browser and navigate to Automation Exercise website.\n" +
-$"2. Click on the Login / Signup option.\n" +
-$"3. Enter invalid email and password.\n" +
-$"4. Click Login\n" +
-$"5. Verify that the validation message appears.\n\n" +
-$"Error:\n" +
-$"Validation Message not found for login page"</CSharpValue>
-                                          </InArgument>
-                                        </uja:CreateIssue.IssueDescription>
-                                        <uja:CreateIssue.TelemetryProperties>
-                                          <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
-                                        </uja:CreateIssue.TelemetryProperties>
-                                      </uja:CreateIssue>
-                                      <isactr:ConnectorActivity Configuration="H4sIAAAAAAAACpVV62/aMBD/VyJ/2qRACV2rDYkPJLRqunagwdpJ01S5yQEuxkn96Eqj/O875wGh9LEJCcW58/l+D18ycsqAxypIhKZMgCS9jEyAymhBbzmUQdL79dsloUiN3rzIyDe6AtIjTCkDYTySX2FNXDJkKuV0XQVDG3TCoZNIZ1nGQUWSpZolAuPTBThFARt1Pgz8YNjyuoefPtoNZSAc4q7pOrXllJZMzHE9SaQeydi267nkIkmWJrWdj27vINLNzm5SFi0xr866otzYYNnNmOoFLg6K1INnqbaMhVrlKrNaUbmewqMmSMcp4xokFsB/C+XegFz3s1nxOid5AZXNMZTVpGyTMyyZOy0naxTNi4Np7K+HMKOGa9LT0gA2mShW8TWWzKbb6oUSg8gGKoG+w71hEuJ6X5FxkUS03mzBoo7qEvQiicdUIkBsqMzP3Y2kiAH2pBxoTaPFCoTeUxGpAEcnjkk59r+Vq6rTEKv7fpeXiJylVOo3WkWwI6NftmP8RuelmfYtaA06czQ+0SbKN1yHQCotrO0rKBYaKNRtRrkq1ipFdWAbL9eBkVS/zkAJDc8biYCKB6r2BDpn+qZ097Zf9T+KTV+B+oNZk7RDoWGOPWLyBOQDi6BtnfaANgTVnlyfCF0+BgP/y9GJFxwdd/cbugkkIM62b0TMof1a3HVeqtJePJ2zVZeDf33pnZ0c/0zDqTeGrutcgVTYWN9rd+wPt6NjjIS+AKMl5a4zNrecRSjMNFmC6AvDOXlfnX+UwboS+S+yazvidQyF0lREsLEqpmek6hWrFd1iMRy0AkdUUozLHjFodb1oUc2pUoyK1h2TFNMquteVLrVj3Jcm3K4HzrROy1tjr3yCgLE7C4uzJ4jrurVF4tgpZ/SOWQJ8hLgxMAswO5O+Z1nN61RfJn8UyFDDyqbmzdtRjFC8lnhpxzRa0jk0Weke7tKycXhBw+Z1c4vntT9vmHhmecSz4+t36RqlUBrdslz4cY/D0WS696nImmTkB7s1L6iYG8SJ6SBwfUkfx7icoAD4vep0OngCVT6etsTBEiww3TJc+dJ+C3yeRMtirOd/AZ3I5pSiBwAA" ConnectionId="285785e9-f0bb-41ec-a8cd-47dd2cab0b71" DisplayName="Add Issue Attachment" sap:VirtualizedContainerService.HintSize="416,263" sap2010:WorkflowViewState.IdRef="ConnectorActivity_2" UiPathActivityTypeId="dba24bbb-8419-35ba-ac7a-d13014151492">
-                                        <isactr:ConnectorActivity.FieldObjects>
-                                          <isactr:FieldObject Name="issueIdOrKey" Type="FieldArgument">
-                                            <isactr:FieldObject.Value>
-                                              <InArgument x:TypeArguments="x:String">
-                                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_44">newBug.Key.Value</CSharpValue>
-                                              </InArgument>
-                                            </isactr:FieldObject.Value>
-                                          </isactr:FieldObject>
-                                          <isactr:FieldObject Name="_file" Type="FieldArgument">
-                                            <isactr:FieldObject.Value>
-                                              <InArgument x:TypeArguments="upr:IResource">
-                                                <CSharpValue x:TypeArguments="upr:IResource" sap2010:WorkflowViewState.IdRef="CSharpValue`1_45">UiPath.Platform.ResourceHandling.LocalResource.FromPath(zipPath)</CSharpValue>
-                                              </InArgument>
-                                            </isactr:FieldObject.Value>
-                                          </isactr:FieldObject>
-                                          <isactr:FieldObject Name="out_id" Type="FieldArgument">
-                                            <isactr:FieldObject.Value>
-                                              <OutArgument x:TypeArguments="x:String" />
-                                            </isactr:FieldObject.Value>
-                                          </isactr:FieldObject>
-                                          <isactr:FieldObject Name="Jit_issue_attachments" Type="FieldArgument">
-                                            <isactr:FieldObject.Value>
-                                              <OutArgument x:TypeArguments="uiascb:issue_attachments_Create" />
-                                            </isactr:FieldObject.Value>
-                                          </isactr:FieldObject>
-                                        </isactr:ConnectorActivity.FieldObjects>
-                                      </isactr:ConnectorActivity>
-                                    </Sequence>
-                                  </If.Then>
-                                  <If.Else>
-                                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,94" sap2010:WorkflowViewState.IdRef="Sequence_19">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                    </Sequence>
-                                  </If.Else>
-                                </If>
-                              </Sequence>
-                            </ActivityAction>
-                          </uja:JiraScope.Body>
-                          <uja:JiraScope.TelemetryProperties>
-                            <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
-                          </uja:JiraScope.TelemetryProperties>
-                        </uja:JiraScope>
-                      </Sequence>
-                    </Sequence>
-                  </ui:CommentOut.Body>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                </ui:CommentOut>
-              </Sequence>
-            </If.Else>
-          </If>
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
@@ -823,163 +481,12 @@ $"Validation Message not found for login page"</CSharpValue>
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="651,3703" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="651,2303" sap2010:WorkflowViewState.IdRef="Sequence_4">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <If sap:VirtualizedContainerService.HintSize="617,1692" sap2010:WorkflowViewState.IdRef="If_10">
-                <If.Condition>
-                  <InArgument x:TypeArguments="x:Boolean">
-                    <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_82">int_reportID==0</CSharpValue>
-                  </InArgument>
-                </If.Condition>
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <If.Then>
-                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="513,1315" sap2010:WorkflowViewState.IdRef="Sequence_32">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="479,215" sap2010:WorkflowViewState.IdRef="MultipleAssign_6">
-                      <ui:MultipleAssign.AssignOperations>
-                        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_15">
-                            <ui:AssignOperation.To>
-                              <OutArgument x:TypeArguments="x:String">
-                                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_51">folderPath</CSharpReference>
-                              </OutArgument>
-                            </ui:AssignOperation.To>
-                            <ui:AssignOperation.Value>
-                              <InArgument x:TypeArguments="x:String">
-                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_83">@"C:\Users\TX\Documents\UiPath\AutomationExerciseProjectForFriday\Reports"</CSharpValue>
-                              </InArgument>
-                            </ui:AssignOperation.Value>
-                          </ui:AssignOperation>
-                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_16">
-                            <ui:AssignOperation.To>
-                              <OutArgument x:TypeArguments="si:DirectoryInfo">
-                                <CSharpReference x:TypeArguments="si:DirectoryInfo" sap2010:WorkflowViewState.IdRef="CSharpReference`1_52">dirInfo</CSharpReference>
-                              </OutArgument>
-                            </ui:AssignOperation.To>
-                            <ui:AssignOperation.Value>
-                              <InArgument x:TypeArguments="si:DirectoryInfo">
-                                <CSharpValue x:TypeArguments="si:DirectoryInfo" sap2010:WorkflowViewState.IdRef="CSharpValue`1_84">new System.IO.DirectoryInfo(folderPath)</CSharpValue>
-                              </InArgument>
-                            </ui:AssignOperation.Value>
-                          </ui:AssignOperation>
-                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_17">
-                            <ui:AssignOperation.To>
-                              <OutArgument x:TypeArguments="si:DirectoryInfo">
-                                <CSharpReference x:TypeArguments="si:DirectoryInfo" sap2010:WorkflowViewState.IdRef="CSharpReference`1_53">latestFolder</CSharpReference>
-                              </OutArgument>
-                            </ui:AssignOperation.To>
-                            <ui:AssignOperation.Value>
-                              <InArgument x:TypeArguments="si:DirectoryInfo">
-                                <CSharpValue x:TypeArguments="si:DirectoryInfo" sap2010:WorkflowViewState.IdRef="CSharpValue`1_85">dirInfo.GetDirectories().OrderByDescending(d =&gt; d.CreationTime).FirstOrDefault()</CSharpValue>
-                              </InArgument>
-                            </ui:AssignOperation.Value>
-                          </ui:AssignOperation>
-                        </scg:List>
-                      </ui:MultipleAssign.AssignOperations>
-                    </ui:MultipleAssign>
-                    <If sap:VirtualizedContainerService.HintSize="479,611" sap2010:WorkflowViewState.IdRef="If_11">
-                      <If.Condition>
-                        <InArgument x:TypeArguments="x:Boolean">
-                          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_86">latestFolder != null</CSharpValue>
-                        </InArgument>
-                      </If.Condition>
-                      <If.Then>
-                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,234" sap2010:WorkflowViewState.IdRef="Sequence_30">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <Assign sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="Assign_7">
-                            <Assign.To>
-                              <OutArgument x:TypeArguments="x:String">
-                                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_54">latestFolderPath</CSharpReference>
-                              </OutArgument>
-                            </Assign.To>
-                            <Assign.Value>
-                              <InArgument x:TypeArguments="x:String">
-                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_87">latestFolder.FullName</CSharpValue>
-                              </InArgument>
-                            </Assign.Value>
-                          </Assign>
-                        </Sequence>
-                      </If.Then>
-                      <If.Else>
-                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,234" sap2010:WorkflowViewState.IdRef="Sequence_31">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info">
-                            <ui:LogMessage.Message>
-                              <InArgument x:TypeArguments="x:Object">
-                                <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_88">"report folder blank"</CSharpValue>
-                              </InArgument>
-                            </ui:LogMessage.Message>
-                          </ui:LogMessage>
-                        </Sequence>
-                      </If.Else>
-                    </If>
-                    <Assign sap:VirtualizedContainerService.HintSize="479,179" sap2010:WorkflowViewState.IdRef="Assign_8">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">
-                          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_55">zipPath</CSharpReference>
-                        </OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">
-                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_89">latestFolderPath + ".zip"</CSharpValue>
-                        </InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <uascw:CompressFiles CompressedFileInfo="{x:Null}" CompressedResource="{x:Null}" Password="{x:Null}" ResourcesToArchive="{x:Null}" SecurePassword="{x:Null}" AllowDuplicateContentNames="False" CodePage="Default" CompressionLevel="Normal" DisplayName="Compress/Zip Files" EncryptionAlgorithm="Classic" sap:VirtualizedContainerService.HintSize="479,246" sap2010:WorkflowViewState.IdRef="CompressFiles_3" OverrideExistingFile="True">
-                      <uascw:CompressFiles.CompressedFileName>
-                        <InArgument x:TypeArguments="x:String">
-                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_91">zipPath</CSharpValue>
-                        </InArgument>
-                      </uascw:CompressFiles.CompressedFileName>
-                      <uascw:CompressFiles.ContentToArchive>
-                        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
-                          <InArgument x:TypeArguments="x:String">
-                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_90">latestFolderPath</CSharpValue>
-                          </InArgument>
-                        </scg:List>
-                      </uascw:CompressFiles.ContentToArchive>
-                    </uascw:CompressFiles>
-                  </Sequence>
-                </If.Then>
-                <If.Else>
-                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="513,234" sap2010:WorkflowViewState.IdRef="Sequence_33">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="479,170" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Warn">
-                      <ui:LogMessage.Message>
-                        <InArgument x:TypeArguments="x:Object">
-                          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_92">"Report not created for this Test Case"</CSharpValue>
-                        </InArgument>
-                      </ui:LogMessage.Message>
-                    </ui:LogMessage>
-                  </Sequence>
-                </If.Else>
-              </If>
               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="617,179" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Error">
                 <ui:LogMessage.Message>
                   <InArgument x:TypeArguments="x:Object">
@@ -987,7 +494,7 @@ $"Validation Message not found for login page"</CSharpValue>
                   </InArgument>
                 </ui:LogMessage.Message>
               </ui:LogMessage>
-              <Sequence DisplayName="JIRA" sap:VirtualizedContainerService.HintSize="617,1768" sap2010:WorkflowViewState.IdRef="Sequence_23">
+              <Sequence DisplayName="JIRA" sap:VirtualizedContainerService.HintSize="617,2060" sap2010:WorkflowViewState.IdRef="Sequence_23">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="ss:SecureString" Name="JiraApi" />
                 </Sequence.Variables>
@@ -1003,7 +510,7 @@ $"Validation Message not found for login page"</CSharpValue>
                     </OutArgument>
                   </ui:GetSecret.Secret>
                 </ui:GetSecret>
-                <uja:JiraScope ClientID="{x:Null}" ClientSecret="{x:Null}" Connection="{x:Null}" ContinueOnError="{x:Null}" JiraConnection="{x:Null}" AuthenticationType="Api Token" DisplayName="Jira Scope" sap:VirtualizedContainerService.HintSize="583,1487" sap2010:WorkflowViewState.IdRef="JiraScope_2" ServerURL="https://testertests404.atlassian.net/" UserName="testertests404@gmail.com">
+                <uja:JiraScope ClientID="{x:Null}" ClientSecret="{x:Null}" Connection="{x:Null}" ContinueOnError="{x:Null}" JiraConnection="{x:Null}" AuthenticationType="Api Token" DisplayName="Jira Scope" sap:VirtualizedContainerService.HintSize="583,1779" sap2010:WorkflowViewState.IdRef="JiraScope_2" ServerURL="https://testertests404.atlassian.net/" UserName="testertests404@gmail.com">
                   <uja:JiraScope.ApiToken>
                     <InArgument x:TypeArguments="ss:SecureString">
                       <CSharpValue x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpValue`1_67">JiraApi</CSharpValue>
@@ -1014,7 +521,7 @@ $"Validation Message not found for login page"</CSharpValue>
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="usa:IObjectContainer" Name="ScopeActivity" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="549,1373" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="549,1665" sap2010:WorkflowViewState.IdRef="Sequence_26">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="aj:Issue" Name="newBug" />
                           <Variable x:TypeArguments="aj:Issue[]" Name="numOfIsssues" />
@@ -1024,7 +531,7 @@ $"Validation Message not found for login page"</CSharpValue>
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uja:SearchIssuesUsingJQL ContinueOnError="{x:Null}" MaxResults="{x:Null}" DisplayName="Search Issues Using JQL" sap:VirtualizedContainerService.HintSize="515,122" sap2010:WorkflowViewState.IdRef="SearchIssuesUsingJQL_4" JQL="project = G4 AND summary ~ &quot;TC_18&quot;">
+                        <uja:SearchIssuesUsingJQL ContinueOnError="{x:Null}" MaxResults="{x:Null}" DisplayName="Search Issues Using JQL" sap:VirtualizedContainerService.HintSize="515,122" sap2010:WorkflowViewState.IdRef="SearchIssuesUsingJQL_4" JQL="project = G4 AND summary ~ &quot;TC_1218&quot;">
                           <uja:SearchIssuesUsingJQL.Issues>
                             <OutArgument x:TypeArguments="aj:Issue[]">
                               <CSharpReference x:TypeArguments="aj:Issue[]" sap2010:WorkflowViewState.IdRef="CSharpReference`1_36">numOfIsssues</CSharpReference>
@@ -1041,14 +548,14 @@ $"Validation Message not found for login page"</CSharpValue>
                             </InArgument>
                           </ui:LogMessage.Message>
                         </ui:LogMessage>
-                        <If sap:VirtualizedContainerService.HintSize="515,1008" sap2010:WorkflowViewState.IdRef="If_8">
+                        <If sap:VirtualizedContainerService.HintSize="515,1300" sap2010:WorkflowViewState.IdRef="If_8">
                           <If.Condition>
                             <InArgument x:TypeArguments="x:Boolean">
-                              <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_93">numOfIsssues.Length&lt;=1</CSharpValue>
+                              <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_106">numOfIsssues.Length&lt;=0</CSharpValue>
                             </InArgument>
                           </If.Condition>
                           <If.Then>
-                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="513,780" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="513,1072" sap2010:WorkflowViewState.IdRef="Sequence_24">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1060,7 +567,7 @@ $"Validation Message not found for login page"</CSharpValue>
                                     <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
                                       <ui:AssignOperation.To>
                                         <OutArgument x:TypeArguments="x:String">
-                                          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_44">failedStepsText</CSharpReference>
+                                          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_62">failedStepsText</CSharpReference>
                                         </OutArgument>
                                       </ui:AssignOperation.To>
                                       <ui:AssignOperation.Value>
@@ -1075,7 +582,7 @@ $"Validation Message not found for login page"</CSharpValue>
                                     <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
                                       <ui:AssignOperation.To>
                                         <OutArgument x:TypeArguments="x:String">
-                                          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_45">stepsText</CSharpReference>
+                                          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_63">stepsText</CSharpReference>
                                         </OutArgument>
                                       </ui:AssignOperation.To>
                                       <ui:AssignOperation.Value>
@@ -1118,34 +625,59 @@ $"Failed Steps:\n{failedStepsText}\n\n"</CSharpValue>
                                   <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
                                 </uja:CreateIssue.TelemetryProperties>
                               </uja:CreateIssue>
-                              <isactr:ConnectorActivity Configuration="H4sIAAAAAAAACpVV62/aMBD/VyJ/2qRACV2rDYkPJLRqunagwdpJ01S5yQEuxkn96Eqj/O875wGh9LEJCcW58/l+D18ycsqAxypIhKZMgCS9jEyAymhBbzmUQdL79dsloUiN3rzIyDe6AtIjTCkDYTySX2FNXDJkKuV0XQVDG3TCoZNIZ1nGQUWSpZolAuPTBThFARt1Pgz8YNjyuoefPtoNZSAc4q7pOrXllJZMzHE9SaQeydi267nkIkmWJrWdj27vINLNzm5SFi0xr866otzYYNnNmOoFLg6K1INnqbaMhVrlKrNaUbmewqMmSMcp4xokFsB/C+XegFz3s1nxOid5AZXNMZTVpGyTMyyZOy0naxTNi4Np7K+HMKOGa9LT0gA2mShW8TWWzKbb6oUSg8gGKoG+w71hEuJ6X5FxkUS03mzBoo7qEvQiicdUIkBsqMzP3Y2kiAH2pBxoTaPFCoTeUxGpAEcnjkk59r+Vq6rTEKv7fpeXiJylVOo3WkWwI6NftmP8RuelmfYtaA06czQ+0SbKN1yHQCotrO0rKBYaKNRtRrkq1ipFdWAbL9eBkVS/zkAJDc8biYCKB6r2BDpn+qZ097Zf9T+KTV+B+oNZk7RDoWGOPWLyBOQDi6BtnfaANgTVnlyfCF0+BgP/y9GJFxwdd/cbugkkIM62b0TMof1a3HVeqtJePJ2zVZeDf33pnZ0c/0zDqTeGrutcgVTYWN9rd+wPt6NjjIS+AKMl5a4zNrecRSjMNFmC6AvDOXlfnX+UwboS+S+yazvidQyF0lREsLEqpmek6hWrFd1iMRy0AkdUUozLHjFodb1oUc2pUoyK1h2TFNMquteVLrVj3Jcm3K4HzrROy1tjr3yCgLE7C4uzJ4jrurVF4tgpZ/SOWQJ8hLgxMAswO5O+Z1nN61RfJn8UyFDDyqbmzdtRjFC8lnhpxzRa0jk0Weke7tKycXhBw+Z1c4vntT9vmHhmecSz4+t36RqlUBrdslz4cY/D0WS696nImmTkB7s1L6iYG8SJ6SBwfUkfx7icoAD4vep0OngCVT6etsTBEiww3TJc+dJ+C3yeRMtirOd/AZ3I5pSiBwAA" ConnectionId="285785e9-f0bb-41ec-a8cd-47dd2cab0b71" DisplayName="Add Issue Attachment" sap:VirtualizedContainerService.HintSize="479,263" sap2010:WorkflowViewState.IdRef="ConnectorActivity_3" UiPathActivityTypeId="dba24bbb-8419-35ba-ac7a-d13014151492">
-                                <isactr:ConnectorActivity.FieldObjects>
-                                  <isactr:FieldObject Name="issueIdOrKey" Type="FieldArgument">
-                                    <isactr:FieldObject.Value>
-                                      <InArgument x:TypeArguments="x:String">
-                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_65">newBug.Key.Value</CSharpValue>
-                                      </InArgument>
-                                    </isactr:FieldObject.Value>
-                                  </isactr:FieldObject>
-                                  <isactr:FieldObject Name="_file" Type="FieldArgument">
-                                    <isactr:FieldObject.Value>
-                                      <InArgument x:TypeArguments="upr:IResource">
-                                        <CSharpValue x:TypeArguments="upr:IResource" sap2010:WorkflowViewState.IdRef="CSharpValue`1_66">UiPath.Platform.ResourceHandling.LocalResource.FromPath(zipPath)</CSharpValue>
-                                      </InArgument>
-                                    </isactr:FieldObject.Value>
-                                  </isactr:FieldObject>
-                                  <isactr:FieldObject Name="out_id" Type="FieldArgument">
-                                    <isactr:FieldObject.Value>
-                                      <OutArgument x:TypeArguments="x:String" />
-                                    </isactr:FieldObject.Value>
-                                  </isactr:FieldObject>
-                                  <isactr:FieldObject Name="Jit_issue_attachments" Type="FieldArgument">
-                                    <isactr:FieldObject.Value>
-                                      <OutArgument x:TypeArguments="uiascb:issue_attachments_Create" />
-                                    </isactr:FieldObject.Value>
-                                  </isactr:FieldObject>
-                                </isactr:ConnectorActivity.FieldObjects>
-                              </isactr:ConnectorActivity>
+                              <If sap:VirtualizedContainerService.HintSize="479,555" sap2010:WorkflowViewState.IdRef="If_15">
+                                <If.Condition>
+                                  <InArgument x:TypeArguments="x:Boolean">
+                                    <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_107">failedScreenShotPath!=null</CSharpValue>
+                                  </InArgument>
+                                </If.Condition>
+                                <If.Then>
+                                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,327" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <isactr:ConnectorActivity Configuration="H4sIAAAAAAAACpVV62/aMBD/VyJ/2qRACV2rDYkPJLRqunagwdpJ01S5yQEuxkn96Eqj/O875wGh9LEJCcW58/l+D18ycsqAxypIhKZMgCS9jEyAymhBbzmUQdL79dsloUiN3rzIyDe6AtIjTCkDYTySX2FNXDJkKuV0XQVDG3TCoZNIZ1nGQUWSpZolAuPTBThFARt1Pgz8YNjyuoefPtoNZSAc4q7pOrXllJZMzHE9SaQeydi267nkIkmWJrWdj27vINLNzm5SFi0xr866otzYYNnNmOoFLg6K1INnqbaMhVrlKrNaUbmewqMmSMcp4xokFsB/C+XegFz3s1nxOid5AZXNMZTVpGyTMyyZOy0naxTNi4Np7K+HMKOGa9LT0gA2mShW8TWWzKbb6oUSg8gGKoG+w71hEuJ6X5FxkUS03mzBoo7qEvQiicdUIkBsqMzP3Y2kiAH2pBxoTaPFCoTeUxGpAEcnjkk59r+Vq6rTEKv7fpeXiJylVOo3WkWwI6NftmP8RuelmfYtaA06czQ+0SbKN1yHQCotrO0rKBYaKNRtRrkq1ipFdWAbL9eBkVS/zkAJDc8biYCKB6r2BDpn+qZ097Zf9T+KTV+B+oNZk7RDoWGOPWLyBOQDi6BtnfaANgTVnlyfCF0+BgP/y9GJFxwdd/cbugkkIM62b0TMof1a3HVeqtJePJ2zVZeDf33pnZ0c/0zDqTeGrutcgVTYWN9rd+wPt6NjjIS+AKMl5a4zNrecRSjMNFmC6AvDOXlfnX+UwboS+S+yazvidQyF0lREsLEqpmek6hWrFd1iMRy0AkdUUozLHjFodb1oUc2pUoyK1h2TFNMquteVLrVj3Jcm3K4HzrROy1tjr3yCgLE7C4uzJ4jrurVF4tgpZ/SOWQJ8hLgxMAswO5O+Z1nN61RfJn8UyFDDyqbmzdtRjFC8lnhpxzRa0jk0Weke7tKycXhBw+Z1c4vntT9vmHhmecSz4+t36RqlUBrdslz4cY/D0WS696nImmTkB7s1L6iYG8SJ6SBwfUkfx7icoAD4vep0OngCVT6etsTBEiww3TJc+dJ+C3yeRMtirOd/AZ3I5pSiBwAA" ConnectionId="285785e9-f0bb-41ec-a8cd-47dd2cab0b71" DisplayName="Add Issue Attachment" sap:VirtualizedContainerService.HintSize="416,263" sap2010:WorkflowViewState.IdRef="ConnectorActivity_4" UiPathActivityTypeId="dba24bbb-8419-35ba-ac7a-d13014151492">
+                                      <isactr:ConnectorActivity.FieldObjects>
+                                        <isactr:FieldObject Name="issueIdOrKey" Type="FieldArgument">
+                                          <isactr:FieldObject.Value>
+                                            <InArgument x:TypeArguments="x:String">
+                                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_108">newBug.Key.Value</CSharpValue>
+                                            </InArgument>
+                                          </isactr:FieldObject.Value>
+                                        </isactr:FieldObject>
+                                        <isactr:FieldObject Name="_file" Type="FieldArgument">
+                                          <isactr:FieldObject.Value>
+                                            <InArgument x:TypeArguments="upr:IResource">
+                                              <CSharpValue x:TypeArguments="upr:IResource" sap2010:WorkflowViewState.IdRef="CSharpValue`1_109">UiPath.Platform.ResourceHandling.LocalResource.FromPath(failedScreenShotPath)</CSharpValue>
+                                            </InArgument>
+                                          </isactr:FieldObject.Value>
+                                        </isactr:FieldObject>
+                                        <isactr:FieldObject Name="out_id" Type="FieldArgument">
+                                          <isactr:FieldObject.Value>
+                                            <OutArgument x:TypeArguments="x:String" />
+                                          </isactr:FieldObject.Value>
+                                        </isactr:FieldObject>
+                                        <isactr:FieldObject Name="Jit_issue_attachments" Type="FieldArgument">
+                                          <isactr:FieldObject.Value>
+                                            <OutArgument x:TypeArguments="uiascb:issue_attachments_Create" />
+                                          </isactr:FieldObject.Value>
+                                        </isactr:FieldObject>
+                                      </isactr:ConnectorActivity.FieldObjects>
+                                    </isactr:ConnectorActivity>
+                                  </Sequence>
+                                </If.Then>
+                                <If.Else>
+                                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,94" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </Sequence>
+                                </If.Else>
+                              </If>
                             </Sequence>
                           </If.Then>
                           <If.Else>
@@ -1171,12 +703,163 @@ $"Failed Steps:\n{failedStepsText}\n\n"</CSharpValue>
         </Catch>
       </TryCatch.Catches>
       <TryCatch.Finally>
-        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="651,1096" sap2010:WorkflowViewState.IdRef="Sequence_5">
+        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="651,2788" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
+          <If sap:VirtualizedContainerService.HintSize="617,1692" sap2010:WorkflowViewState.IdRef="If_12">
+            <If.Condition>
+              <InArgument x:TypeArguments="x:Boolean">
+                <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_95">int_reportID==0</CSharpValue>
+              </InArgument>
+            </If.Condition>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <If.Then>
+              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="513,1315" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="479,215" sap2010:WorkflowViewState.IdRef="MultipleAssign_7">
+                  <ui:MultipleAssign.AssignOperations>
+                    <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_18">
+                        <ui:AssignOperation.To>
+                          <OutArgument x:TypeArguments="x:String">
+                            <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_57">folderPath</CSharpReference>
+                          </OutArgument>
+                        </ui:AssignOperation.To>
+                        <ui:AssignOperation.Value>
+                          <InArgument x:TypeArguments="x:String">
+                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_96">@"C:\Users\TX\Documents\UiPath\AutomationExerciseProjectForFriday\Reports"</CSharpValue>
+                          </InArgument>
+                        </ui:AssignOperation.Value>
+                      </ui:AssignOperation>
+                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_19">
+                        <ui:AssignOperation.To>
+                          <OutArgument x:TypeArguments="si:DirectoryInfo">
+                            <CSharpReference x:TypeArguments="si:DirectoryInfo" sap2010:WorkflowViewState.IdRef="CSharpReference`1_58">dirInfo</CSharpReference>
+                          </OutArgument>
+                        </ui:AssignOperation.To>
+                        <ui:AssignOperation.Value>
+                          <InArgument x:TypeArguments="si:DirectoryInfo">
+                            <CSharpValue x:TypeArguments="si:DirectoryInfo" sap2010:WorkflowViewState.IdRef="CSharpValue`1_97">new System.IO.DirectoryInfo(folderPath)</CSharpValue>
+                          </InArgument>
+                        </ui:AssignOperation.Value>
+                      </ui:AssignOperation>
+                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_20">
+                        <ui:AssignOperation.To>
+                          <OutArgument x:TypeArguments="si:DirectoryInfo">
+                            <CSharpReference x:TypeArguments="si:DirectoryInfo" sap2010:WorkflowViewState.IdRef="CSharpReference`1_59">latestFolder</CSharpReference>
+                          </OutArgument>
+                        </ui:AssignOperation.To>
+                        <ui:AssignOperation.Value>
+                          <InArgument x:TypeArguments="si:DirectoryInfo">
+                            <CSharpValue x:TypeArguments="si:DirectoryInfo" sap2010:WorkflowViewState.IdRef="CSharpValue`1_98">dirInfo.GetDirectories().OrderByDescending(d =&gt; d.CreationTime).FirstOrDefault()</CSharpValue>
+                          </InArgument>
+                        </ui:AssignOperation.Value>
+                      </ui:AssignOperation>
+                    </scg:List>
+                  </ui:MultipleAssign.AssignOperations>
+                </ui:MultipleAssign>
+                <If sap:VirtualizedContainerService.HintSize="479,611" sap2010:WorkflowViewState.IdRef="If_13">
+                  <If.Condition>
+                    <InArgument x:TypeArguments="x:Boolean">
+                      <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_99">latestFolder != null</CSharpValue>
+                    </InArgument>
+                  </If.Condition>
+                  <If.Then>
+                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,234" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Assign sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="Assign_9">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">
+                            <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_60">latestFolderPath</CSharpReference>
+                          </OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">
+                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_100">latestFolder.FullName</CSharpValue>
+                          </InArgument>
+                        </Assign.Value>
+                      </Assign>
+                    </Sequence>
+                  </If.Then>
+                  <If.Else>
+                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,234" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Info">
+                        <ui:LogMessage.Message>
+                          <InArgument x:TypeArguments="x:Object">
+                            <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_101">"report folder blank"</CSharpValue>
+                          </InArgument>
+                        </ui:LogMessage.Message>
+                      </ui:LogMessage>
+                    </Sequence>
+                  </If.Else>
+                </If>
+                <Assign sap:VirtualizedContainerService.HintSize="479,179" sap2010:WorkflowViewState.IdRef="Assign_10">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">
+                      <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_61">zipPath</CSharpReference>
+                    </OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_102">latestFolderPath + ".zip"</CSharpValue>
+                    </InArgument>
+                  </Assign.Value>
+                </Assign>
+                <uascw:CompressFiles CompressedFileInfo="{x:Null}" CompressedResource="{x:Null}" Password="{x:Null}" ResourcesToArchive="{x:Null}" SecurePassword="{x:Null}" AllowDuplicateContentNames="False" CodePage="Default" CompressionLevel="Normal" DisplayName="Compress/Zip Files" EncryptionAlgorithm="Classic" sap:VirtualizedContainerService.HintSize="479,246" sap2010:WorkflowViewState.IdRef="CompressFiles_4" OverrideExistingFile="True">
+                  <uascw:CompressFiles.CompressedFileName>
+                    <InArgument x:TypeArguments="x:String">
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_104">zipPath</CSharpValue>
+                    </InArgument>
+                  </uascw:CompressFiles.CompressedFileName>
+                  <uascw:CompressFiles.ContentToArchive>
+                    <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_103">latestFolderPath</CSharpValue>
+                      </InArgument>
+                    </scg:List>
+                  </uascw:CompressFiles.ContentToArchive>
+                </uascw:CompressFiles>
+              </Sequence>
+            </If.Then>
+            <If.Else>
+              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="513,234" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="479,170" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Warn">
+                  <ui:LogMessage.Message>
+                    <InArgument x:TypeArguments="x:Object">
+                      <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_105">"Report not created for this Test Case"</CSharpValue>
+                    </InArgument>
+                  </ui:LogMessage.Message>
+                </ui:LogMessage>
+              </Sequence>
+            </If.Else>
+          </If>
           <If sap:VirtualizedContainerService.HintSize="617,1032" sap2010:WorkflowViewState.IdRef="If_7">
             <If.Condition>
               <InArgument x:TypeArguments="x:Boolean">
