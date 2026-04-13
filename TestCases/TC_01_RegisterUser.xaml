@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="TC_01_RegisterUser" this:TC_01_RegisterUser.rowIdx="0" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:l="clr-namespace:LibraryForTenTabs;assembly=LibraryForTenTabs" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:ra="clr-namespace:ReporterForUiPath.Activities;assembly=ReporterForUiPath.Activities" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="TC_01_RegisterUser" this:TC_01_RegisterUser.rowIdx="0" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:aj="clr-namespace:Atlassian.Jira;assembly=Atlassian.Jira" xmlns:isactr="http://schemas.uipath.com/workflow/integration-service-activities/isactr" xmlns:l="clr-namespace:LibraryForTenTabs;assembly=LibraryForTenTabs" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:ra="clr-namespace:ReporterForUiPath.Activities;assembly=ReporterForUiPath.Activities" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ubt="clr-namespace:UiPath.BAF.Telemetry;assembly=UiPath.Jira" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uiascb="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.CAB95E1C562_issue_attachments_Create.Bundle;assembly=CAB95E1C562_issue_at.hzJim2leBWM1HE6XpIT1Pe2" xmlns:uja="clr-namespace:UiPath.Jira.Activities;assembly=UiPath.Jira.Activities" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:usa="clr-namespace:UiPath.Shared.Activities;assembly=UiPath.Jira.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="Browser" Type="InArgument(x:String)" />
     <x:Property Name="rowIdx" Type="InArgument(x:Int32)" />
@@ -64,6 +64,16 @@
       <x:String>System.Runtime.InteropServices</x:String>
       <x:String>System.Security</x:String>
       <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>Atlassian.Jira</x:String>
+      <x:String>UiPath.BAF.Telemetry</x:String>
+      <x:String>UiPath.Jira.Activities.Enums.JiraApplicationScope</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models.FilterBuilder</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Helpers.TypeDetailsCustomization</x:String>
+      <x:String>UiPath.Jira.Activities</x:String>
+      <x:String>UiPath.Jira.Activities.Activities</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Activities</x:String>
+      <x:String>UiPath.Platform.Activities</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -159,9 +169,15 @@
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
       <AssemblyReference>LibraryForTenTabs_Studio.Generated.TypedDataTable1</AssemblyReference>
+      <AssemblyReference>Atlassian.Jira</AssemblyReference>
+      <AssemblyReference>UiPath.Jira</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="830,3663" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="683,6041" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_dataTable" />
       <Variable x:TypeArguments="x:String" Name="mrOrMrs" />
@@ -180,24 +196,27 @@
       <Variable x:TypeArguments="x:String" Name="address" />
       <Variable x:TypeArguments="x:String" Name="year" />
       <Variable x:TypeArguments="x:String" Name="date" />
+      <Variable x:TypeArguments="scg:List(x:String)" Name="steps" />
+      <Variable x:TypeArguments="x:String" Name="Browser" />
+      <Variable x:TypeArguments="x:String" Name="failedScreenShotPath" />
+      <Variable x:TypeArguments="scg:List(x:String)" Name="failedSteps" />
+      <Variable x:TypeArguments="x:String" Name="failedStepsText" />
+      <Variable x:TypeArguments="x:String" Name="stepsText" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="515,3640" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="653,6018" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="513,3143" sap2010:WorkflowViewState.IdRef="Sequence_2">
-          <Sequence.Variables>
-            <Variable x:TypeArguments="x:String" Name="Browser" />
-          </Sequence.Variables>
+        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="651,3483" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <If sap:VirtualizedContainerService.HintSize="479,463" sap2010:WorkflowViewState.IdRef="If_1">
+          <If sap:VirtualizedContainerService.HintSize="617,463" sap2010:WorkflowViewState.IdRef="If_1">
             <If.Condition>
               <InArgument x:TypeArguments="x:Boolean">
                 <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">reportIdLocal.Equals(0)</CSharpValue>
@@ -234,7 +253,7 @@
               </Sequence>
             </If.Else>
           </If>
-          <ra:StartSuite ContinueOnError="{x:Null}" DisplayName="Start Suite" sap:VirtualizedContainerService.HintSize="479,122" sap2010:WorkflowViewState.IdRef="StartSuite_1" SuiteName="Register User Suite">
+          <ra:StartSuite ContinueOnError="{x:Null}" DisplayName="Start Suite" sap:VirtualizedContainerService.HintSize="617,122" sap2010:WorkflowViewState.IdRef="StartSuite_1" SuiteName="Register User Suite">
             <ra:StartSuite.ReportId>
               <InArgument x:TypeArguments="x:Int32">
                 <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">reportIdLocal</CSharpValue>
@@ -246,20 +265,20 @@
               </OutArgument>
             </ra:StartSuite.suiteId>
           </ra:StartSuite>
-          <l:GetExcelData sap:VirtualizedContainerService.HintSize="479,127" sap2010:WorkflowViewState.IdRef="GetExcelData_1">
+          <l:GetExcelData sap:VirtualizedContainerService.HintSize="617,127" sap2010:WorkflowViewState.IdRef="GetExcelData_1">
             <l:GetExcelData.dt_dataTable>
               <OutArgument x:TypeArguments="sd:DataTable">
                 <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">dt_dataTable</CSharpReference>
               </OutArgument>
             </l:GetExcelData.dt_dataTable>
           </l:GetExcelData>
-          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="479,649" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="617,649" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
             <ui:MultipleAssign.AssignOperations>
               <scg:List x:TypeArguments="ui:AssignOperation" Capacity="32">
                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
                   <ui:AssignOperation.To>
                     <OutArgument x:TypeArguments="x:String">
-                      <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_38">Browser</CSharpReference>
+                      <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_40">Browser</CSharpReference>
                     </OutArgument>
                   </ui:AssignOperation.To>
                   <ui:AssignOperation.Value>
@@ -463,19 +482,54 @@
               </scg:List>
             </ui:MultipleAssign.AssignOperations>
           </ui:MultipleAssign>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="479,179" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info">
+          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="617,184" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+            <ui:MultipleAssign.AssignOperations>
+              <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_18">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="scg:List(x:String)">
+                      <CSharpReference x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_43">steps</CSharpReference>
+                    </OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="scg:List(x:String)">
+                      <CSharpValue x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_53">new List&lt;string&gt;()</CSharpValue>
+                    </InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_19">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="scg:List(x:String)">
+                      <CSharpReference x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_44">failedSteps</CSharpReference>
+                    </OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="scg:List(x:String)">
+                      <CSharpValue x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_54">new List&lt;string&gt;()</CSharpValue>
+                    </InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+              </scg:List>
+            </ui:MultipleAssign.AssignOperations>
+          </ui:MultipleAssign>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="617,179" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info">
             <ui:LogMessage.Message>
               <InArgument x:TypeArguments="x:Object">
                 <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_47">"rowIdx is "+ rowIdx</CSharpValue>
               </InArgument>
             </ui:LogMessage.Message>
           </ui:LogMessage>
-          <l:Register sap:VirtualizedContainerService.HintSize="479,1063" sap2010:WorkflowViewState.IdRef="Register_1">
+          <l:Register sap:VirtualizedContainerService.HintSize="617,1219" sap2010:WorkflowViewState.IdRef="Register_1">
             <l:Register.Browser>
               <InArgument x:TypeArguments="x:String">
                 <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_41">Browser</CSharpValue>
               </InArgument>
             </l:Register.Browser>
+            <l:Register.FailedScreenShotPath>
+              <OutArgument x:TypeArguments="x:String">
+                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_42">failedScreenShotPath</CSharpReference>
+              </OutArgument>
+            </l:Register.FailedScreenShotPath>
             <l:Register.address>
               <InArgument x:TypeArguments="x:String">
                 <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_33">address</CSharpValue>
@@ -503,9 +557,14 @@
             </l:Register.date>
             <l:Register.email>
               <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_39">email</CSharpValue>
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_52">"test" + DateTime.Now.ToString("yyyyMMddHHmmss") + "@gmail.com";</CSharpValue>
               </InArgument>
             </l:Register.email>
+            <l:Register.failedSteps>
+              <InOutArgument x:TypeArguments="scg:List(x:String)">
+                <CSharpReference x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_41">failedSteps</CSharpReference>
+              </InOutArgument>
+            </l:Register.failedSteps>
             <l:Register.firstName>
               <InArgument x:TypeArguments="x:String">
                 <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">firstName</CSharpValue>
@@ -551,6 +610,11 @@
                 <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_31">state</CSharpValue>
               </InArgument>
             </l:Register.state>
+            <l:Register.steps>
+              <InOutArgument x:TypeArguments="scg:List(x:String)">
+                <CSharpReference x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_39">steps</CSharpReference>
+              </InOutArgument>
+            </l:Register.steps>
             <l:Register.suiteIdLocal>
               <InArgument x:TypeArguments="x:String">
                 <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">suiteIdLocal</CSharpValue>
@@ -567,8 +631,8 @@
               </InArgument>
             </l:Register.zipCode>
           </l:Register>
-          <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="479,127" sap2010:WorkflowViewState.IdRef="Delay_1" />
-          <l:Logout sap:VirtualizedContainerService.HintSize="479,231" sap2010:WorkflowViewState.IdRef="Logout_1">
+          <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="617,127" sap2010:WorkflowViewState.IdRef="Delay_1" />
+          <l:Logout sap:VirtualizedContainerService.HintSize="617,231" sap2010:WorkflowViewState.IdRef="Logout_1">
             <l:Logout.Browser>
               <InArgument x:TypeArguments="x:String">
                 <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_48">Browser</CSharpValue>
@@ -585,7 +649,7 @@
               </InArgument>
             </l:Logout.suiteIdLocal>
           </l:Logout>
-          <l:RedirectToHomePage sap:VirtualizedContainerService.HintSize="479,118" sap2010:WorkflowViewState.IdRef="RedirectToHomePage_1">
+          <l:RedirectToHomePage sap:VirtualizedContainerService.HintSize="617,118" sap2010:WorkflowViewState.IdRef="RedirectToHomePage_1">
             <l:RedirectToHomePage.Browser>
               <InArgument x:TypeArguments="x:String">
                 <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_51">Browser</CSharpValue>
@@ -600,25 +664,229 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="513,234" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="651,2272" sap2010:WorkflowViewState.IdRef="Sequence_4">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="479,170" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Error">
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="617,179" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Error">
                 <ui:LogMessage.Message>
                   <InArgument x:TypeArguments="x:Object">
                     <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">"system error occured " + exception.Message</CSharpValue>
                   </InArgument>
                 </ui:LogMessage.Message>
               </ui:LogMessage>
+              <Sequence DisplayName="JIRA" sap:VirtualizedContainerService.HintSize="617,2029" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="ss:SecureString" Name="JiraApi" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:GetSecret TimeoutMS="{x:Null}" AssetName="JiraAPIToken" DisplayName="Get Secret" FolderPath="dg934257@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="583,190" sap2010:WorkflowViewState.IdRef="GetSecret_1">
+                  <ui:GetSecret.Secret>
+                    <OutArgument x:TypeArguments="ss:SecureString">
+                      <CSharpReference x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpReference`1_45">JiraApi</CSharpReference>
+                    </OutArgument>
+                  </ui:GetSecret.Secret>
+                </ui:GetSecret>
+                <uja:JiraScope ClientID="{x:Null}" ClientSecret="{x:Null}" Connection="{x:Null}" ContinueOnError="{x:Null}" JiraConnection="{x:Null}" AuthenticationType="Api Token" DisplayName="Jira Scope" sap:VirtualizedContainerService.HintSize="583,1748" sap2010:WorkflowViewState.IdRef="JiraScope_1" ServerURL="https://testertests404.atlassian.net/" UserName="testertests404@gmail.com">
+                  <uja:JiraScope.ApiToken>
+                    <InArgument x:TypeArguments="ss:SecureString">
+                      <CSharpValue x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpValue`1_63">JiraApi</CSharpValue>
+                    </InArgument>
+                  </uja:JiraScope.ApiToken>
+                  <uja:JiraScope.Body>
+                    <ActivityAction x:TypeArguments="usa:IObjectContainer">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="usa:IObjectContainer" Name="ScopeActivity" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="549,1634" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                        <Sequence.Variables>
+                          <Variable x:TypeArguments="aj:Issue" Name="newBug" />
+                          <Variable x:TypeArguments="aj:Issue[]" Name="numOfIsssues" />
+                        </Sequence.Variables>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uja:SearchIssuesUsingJQL ContinueOnError="{x:Null}" MaxResults="{x:Null}" DisplayName="Search Issues Using JQL" sap:VirtualizedContainerService.HintSize="515,122" sap2010:WorkflowViewState.IdRef="SearchIssuesUsingJQL_1" JQL="project = G4 AND summary ~ &quot;TC_01&quot;">
+                          <uja:SearchIssuesUsingJQL.Issues>
+                            <OutArgument x:TypeArguments="aj:Issue[]">
+                              <CSharpReference x:TypeArguments="aj:Issue[]" sap2010:WorkflowViewState.IdRef="CSharpReference`1_46">numOfIsssues</CSharpReference>
+                            </OutArgument>
+                          </uja:SearchIssuesUsingJQL.Issues>
+                          <uja:SearchIssuesUsingJQL.TelemetryProperties>
+                            <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+                          </uja:SearchIssuesUsingJQL.TelemetryProperties>
+                        </uja:SearchIssuesUsingJQL>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="515,179" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info">
+                          <ui:LogMessage.Message>
+                            <InArgument x:TypeArguments="x:Object">
+                              <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_55">"Number of issues: " + numOfIsssues.Length.ToString()</CSharpValue>
+                            </InArgument>
+                          </ui:LogMessage.Message>
+                        </ui:LogMessage>
+                        <If sap:VirtualizedContainerService.HintSize="515,1269" sap2010:WorkflowViewState.IdRef="If_2">
+                          <If.Condition>
+                            <InArgument x:TypeArguments="x:Boolean">
+                              <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_56">numOfIsssues.Length&lt;=0</CSharpValue>
+                            </InArgument>
+                          </If.Condition>
+                          <If.Then>
+                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="513,1041" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="479,184" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
+                                <ui:MultipleAssign.AssignOperations>
+                                  <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_20">
+                                      <ui:AssignOperation.To>
+                                        <OutArgument x:TypeArguments="x:String">
+                                          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_47">failedStepsText</CSharpReference>
+                                        </OutArgument>
+                                      </ui:AssignOperation.To>
+                                      <ui:AssignOperation.Value>
+                                        <InArgument x:TypeArguments="x:String">
+                                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_57" xml:space="preserve">string.Join(
+    "\n",
+    failedSteps.Select((f, i) =&gt; $"{i + 1}. {f}")
+);</CSharpValue>
+                                        </InArgument>
+                                      </ui:AssignOperation.Value>
+                                    </ui:AssignOperation>
+                                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_21">
+                                      <ui:AssignOperation.To>
+                                        <OutArgument x:TypeArguments="x:String">
+                                          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_48">stepsText</CSharpReference>
+                                        </OutArgument>
+                                      </ui:AssignOperation.To>
+                                      <ui:AssignOperation.Value>
+                                        <InArgument x:TypeArguments="x:String">
+                                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_58" xml:space="preserve">string.Join(
+    "\n",
+    steps.Select((s, i) =&gt; $"{i + 1}. {s}")
+);</CSharpValue>
+                                        </InArgument>
+                                      </ui:AssignOperation.Value>
+                                    </ui:AssignOperation>
+                                  </scg:List>
+                                </ui:MultipleAssign.AssignOperations>
+                              </ui:MultipleAssign>
+                              <uja:CreateIssue Components="{x:Null}" ContinueOnError="{x:Null}" CustomFields="{x:Null}" ParentIssueKey="{x:Null}" DisplayName="Create Issue" sap:VirtualizedContainerService.HintSize="479,269" sap2010:WorkflowViewState.IdRef="CreateIssue_1" IssueSummary="[TC_01] Register+Logout" IssueType="Bug" ProjectKey="G4">
+                                <uja:CreateIssue.AdditionalFields>
+                                  <scg:Dictionary x:TypeArguments="x:String, InArgument" />
+                                </uja:CreateIssue.AdditionalFields>
+                                <uja:CreateIssue.Issue>
+                                  <OutArgument x:TypeArguments="aj:Issue">
+                                    <CSharpReference x:TypeArguments="aj:Issue" sap2010:WorkflowViewState.IdRef="CSharpReference`1_49">newBug</CSharpReference>
+                                  </OutArgument>
+                                </uja:CreateIssue.Issue>
+                                <uja:CreateIssue.IssueDescription>
+                                  <InArgument x:TypeArguments="x:String">
+                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_64" xml:space="preserve">$"Test Case: TC_01 Register+Logout\n" +
+$"Status: FAILED\n" +
+$"Execution Time: {DateTime.Now:dd MMM yyyy HH:mm}\n\n" +
+$"Environment: QA\n" +
+$"Application: Automation Exercise\n" +
+$"URL: https://automationexercise.com\n\n" +
+$"Automation Tool: UiPath\n" +
+$"Hybrid Test Framework\n" +
+$"Browser: {Browser}\n\n" +
+$"Steps Executed:\n{stepsText}\n\n" +
+$"Failed Steps:\n{failedStepsText}\n\n"</CSharpValue>
+                                  </InArgument>
+                                </uja:CreateIssue.IssueDescription>
+                                <uja:CreateIssue.TelemetryProperties>
+                                  <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+                                </uja:CreateIssue.TelemetryProperties>
+                              </uja:CreateIssue>
+                              <If sap:VirtualizedContainerService.HintSize="479,524" sap2010:WorkflowViewState.IdRef="If_3">
+                                <If.Condition>
+                                  <InArgument x:TypeArguments="x:Boolean">
+                                    <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_60">failedScreenShotPath!=null</CSharpValue>
+                                  </InArgument>
+                                </If.Condition>
+                                <If.Then>
+                                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,296" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <isactr:ConnectorActivity Configuration="H4sIAAAAAAAACpVV62/aMBD/VyJ/2qRACV2rDYkPJLRqunagwdpJ01S5yQEuxkn96Eqj/O875wGh9LEJCcW58/l+D18ycsqAxypIhKZMgCS9jEyAymhBbzmUQdL79dsloUiN3rzIyDe6AtIjTCkDYTySX2FNXDJkKuV0XQVDG3TCoZNIZ1nGQUWSpZolAuPTBThFARt1Pgz8YNjyuoefPtoNZSAc4q7pOrXllJZMzHE9SaQeydi267nkIkmWJrWdj27vINLNzm5SFi0xr866otzYYNnNmOoFLg6K1INnqbaMhVrlKrNaUbmewqMmSMcp4xokFsB/C+XegFz3s1nxOid5AZXNMZTVpGyTMyyZOy0naxTNi4Np7K+HMKOGa9LT0gA2mShW8TWWzKbb6oUSg8gGKoG+w71hEuJ6X5FxkUS03mzBoo7qEvQiicdUIkBsqMzP3Y2kiAH2pBxoTaPFCoTeUxGpAEcnjkk59r+Vq6rTEKv7fpeXiJylVOo3WkWwI6NftmP8RuelmfYtaA06czQ+0SbKN1yHQCotrO0rKBYaKNRtRrkq1ipFdWAbL9eBkVS/zkAJDc8biYCKB6r2BDpn+qZ097Zf9T+KTV+B+oNZk7RDoWGOPWLyBOQDi6BtnfaANgTVnlyfCF0+BgP/y9GJFxwdd/cbugkkIM62b0TMof1a3HVeqtJePJ2zVZeDf33pnZ0c/0zDqTeGrutcgVTYWN9rd+wPt6NjjIS+AKMl5a4zNrecRSjMNFmC6AvDOXlfnX+UwboS+S+yazvidQyF0lREsLEqpmek6hWrFd1iMRy0AkdUUozLHjFodb1oUc2pUoyK1h2TFNMquteVLrVj3Jcm3K4HzrROy1tjr3yCgLE7C4uzJ4jrurVF4tgpZ/SOWQJ8hLgxMAswO5O+Z1nN61RfJn8UyFDDyqbmzdtRjFC8lnhpxzRa0jk0Weke7tKycXhBw+Z1c4vntT9vmHhmecSz4+t36RqlUBrdslz4cY/D0WS696nImmTkB7s1L6iYG8SJ6SBwfUkfx7icoAD4vep0OngCVT6etsTBEiww3TJc+dJ+C3yeRMtirOd/AZ3I5pSiBwAA" ConnectionId="285785e9-f0bb-41ec-a8cd-47dd2cab0b71" DisplayName="Add Issue Attachment" sap:VirtualizedContainerService.HintSize="416,232" sap2010:WorkflowViewState.IdRef="ConnectorActivity_1" UiPathActivityTypeId="dba24bbb-8419-35ba-ac7a-d13014151492">
+                                      <isactr:ConnectorActivity.FieldObjects>
+                                        <isactr:FieldObject Name="issueIdOrKey" Type="FieldArgument">
+                                          <isactr:FieldObject.Value>
+                                            <InArgument x:TypeArguments="x:String">
+                                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_61">newBug.Key.Value</CSharpValue>
+                                            </InArgument>
+                                          </isactr:FieldObject.Value>
+                                        </isactr:FieldObject>
+                                        <isactr:FieldObject Name="_file" Type="FieldArgument">
+                                          <isactr:FieldObject.Value>
+                                            <InArgument x:TypeArguments="upr:IResource">
+                                              <CSharpValue x:TypeArguments="upr:IResource" sap2010:WorkflowViewState.IdRef="CSharpValue`1_62">UiPath.Platform.ResourceHandling.LocalResource.FromPath(failedScreenShotPath)</CSharpValue>
+                                            </InArgument>
+                                          </isactr:FieldObject.Value>
+                                        </isactr:FieldObject>
+                                        <isactr:FieldObject Name="out_id" Type="FieldArgument">
+                                          <isactr:FieldObject.Value>
+                                            <OutArgument x:TypeArguments="x:String" />
+                                          </isactr:FieldObject.Value>
+                                        </isactr:FieldObject>
+                                        <isactr:FieldObject Name="Jit_issue_attachments" Type="FieldArgument">
+                                          <isactr:FieldObject.Value>
+                                            <OutArgument x:TypeArguments="uiascb:issue_attachments_Create" />
+                                          </isactr:FieldObject.Value>
+                                        </isactr:FieldObject>
+                                      </isactr:ConnectorActivity.FieldObjects>
+                                    </isactr:ConnectorActivity>
+                                  </Sequence>
+                                </If.Then>
+                                <If.Else>
+                                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,94" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </Sequence>
+                                </If.Else>
+                              </If>
+                            </Sequence>
+                          </If.Then>
+                          <If.Else>
+                            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="513,94" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Sequence>
+                          </If.Else>
+                        </If>
+                      </Sequence>
+                    </ActivityAction>
+                  </uja:JiraScope.Body>
+                  <uja:JiraScope.TelemetryProperties>
+                    <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+                  </uja:JiraScope.TelemetryProperties>
+                </uja:JiraScope>
+              </Sequence>
             </Sequence>
           </ActivityAction>
         </Catch>
       </TryCatch.Catches>
       <TryCatch.Finally>
-        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="513,94" sap2010:WorkflowViewState.IdRef="Sequence_5">
+        <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="651,94" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>

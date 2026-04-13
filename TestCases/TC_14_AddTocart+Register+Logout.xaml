@@ -732,7 +732,7 @@
             </l:ProceedTocheckOut.suiteIdLocal>
           </l:ProceedTocheckOut>
           <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="617,127" sap2010:WorkflowViewState.IdRef="Delay_3" />
-          <l:Register sap:VirtualizedContainerService.HintSize="617,1219" sap2010:WorkflowViewState.IdRef="Register_1" city="Batala" email="yaahookoimujhe123@gmail.com">
+          <l:Register sap:VirtualizedContainerService.HintSize="617,1219" sap2010:WorkflowViewState.IdRef="Register_1" city="Batala">
             <l:Register.Browser>
               <InArgument x:TypeArguments="x:String">
                 <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_64">Browser</CSharpValue>
@@ -763,6 +763,11 @@
                 <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_83">date</CSharpValue>
               </InArgument>
             </l:Register.date>
+            <l:Register.email>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_109">"test" + DateTime.Now.ToString("yyyyMMddHHmmss") + "@gmail.com";</CSharpValue>
+              </InArgument>
+            </l:Register.email>
             <l:Register.failedSteps>
               <InOutArgument x:TypeArguments="scg:List(x:String)">
                 <CSharpReference x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_69">failedSteps</CSharpReference>

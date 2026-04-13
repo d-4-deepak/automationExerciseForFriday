@@ -185,7 +185,7 @@
       <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="745,8633" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="683,8581" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_dataTable" />
       <Variable x:TypeArguments="x:Int32" Name="int_reportID" />
@@ -206,9 +206,9 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="653,8610" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="653,8558" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="651,3782" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="651,3730" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="searchString" />
             <Variable x:TypeArguments="x:Boolean" Name="isLogin" />
@@ -506,7 +506,7 @@
               </InArgument>
             </l:SearchProducts.suiteIdLocal>
           </l:SearchProducts>
-          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Automation Exercise - Checkout" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="617,861" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="d00d65c8-cdd9-4aa9-a251-c9f8923e539a" Version="V2">
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Automation Exercise - Checkout" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="617,809" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="d00d65c8-cdd9-4aa9-a251-c9f8923e539a" Version="V2">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
@@ -564,22 +564,7 @@
               </ActivityFunc>
             </uix:NApplicationCard.OCREngine>
             <uix:NApplicationCard.TargetApp>
-              <uix:TargetApp Area="-8, -8, 1616, 868" BrowserType="Chrome" ContentHash="LfBjbkAxJ0euSv4azFZCXA" IconBase64="iVBORw0KGgoAAAANSUhEUgAAAE4AAABTCAIAAAC+gKYPAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAA89JREFUeF7tmsuVqzAMhqeF1EQ9dEML6YANezpgy4YSKCDkHr/AlmSwMWCFy3+0GQJn+LCsF/x9/xv9wQP31YN6Rz2od9SDekc9qHfUg7pH/XdopqGZRvgDEx2EOjZT/fq8pdUV/JWHjkAdSg15d9RmsjmFlRM8h4WSUbvC5Xx93gXP7ZqGOlaIU9g0wBM5KAl1aiGkNpbbNQFVu27xmWPvYhy3615U7bpyW4IIPB9npn2ovc6iXS/+InbsbVDVMi4b0pBbxjAyxaOaNXRgOuTDasE5KRpVRV24aAPy4bZxz8ivSFQdgagAO7puvII6lPDIJYpBncMPjQEqxFJ0OUMjO4HiUztFFbz0EoWjmkXzlge4GPYavPQSBaOagmEli3iLJ2TwyksUiNprDNp1Zb/a4rofm/TkuoCXX6IwVNO+WIFXzhy6cmpRmgHWVtPIIvFsoy7LVVffsafKQOnYbTmN0IdhTsqqVdSxhynEYhPLNYgT7Ct+DtUaFBFW+Csh+FyYo8LbdawuxEp6ha71PpQMgqiehFF82nIVUumHUMmQ0/pqBkLwSfFFHSuV95ao60uktNCqxl1+rqADK5nFWauNSMFV9VaRGUShLvNOqoNZFUSNf1jnyUGV67DcaHyqQA78fk1stitCXUxUP5EiUPn4sA91PX/69Iuou70Ov9c4CXXsZesfcZ8UasrNocy8tuFlje3YUBm/kP2DqLHhRULLf4kIexh1n+sa2aj1WgBHsdpval6jrXQa45i87aCKB7nbdbXmsUvhXU+08jst0vuovJoqsYtoxzuQMz7nn4G6qhlVOaRpeol5jeO39vGQxoPQ5ag6GsFjKHSjRZPDHe+mCFAOVFIANXIfhogN6vnfjnBFjckigWKD6r6kTdmTPrFBdVaVqoGGSoQlMVWGvwSKCSruE6g0ow0F5zCxRfXabt9mgRpRDyfUrSxQUVKVs1hRMMhPUdUu7fzFZph4oDrhd+dW3BQPVDv8npBRlXigJswow8UCdQlLJ9SDszigWh9RnOa9/FATcsmmGKBaMWl3eRAiBqhLTKJK3+OUH9UqlWJQ9TwVHl5RdlT7w66gTCOmUM6LpdDtnRvVrpNCwm/Ct8e5UWPrJDhtUwsLzyJ1Kaqo2mffw13bNio1Qw1z+6tR0V1SJj5PqExPY9oaukcXxnSv4htNssjhy8+hmla22/R2qGtR1au0QX5m6nFIbfo1h5ybLc6c1J1fiuoIxN7lLSs88ShlQnVGoaEhNFFZUJ1P3wOzYrpyo27n0sOUCVVEnbhUka4sqHn0oN5R/wBGC/C5PNYWiAAAAABJRU5ErkJggg==" InformativeScreenshot="f41d15f9607ef93467ee15be42dd3cec.jpg" Reference="QVSvyFUrfkGZUFLUcd8YJQ/h4QJ8moF2kCfGZQT6RHwgQ" Url="https://automationexercise.com/product_details/*" Version="V2">
-                <uix:TargetApp.Arguments>
-                  <InArgument x:TypeArguments="x:String" />
-                </uix:TargetApp.Arguments>
-                <uix:TargetApp.FilePath>
-                  <InArgument x:TypeArguments="x:String" />
-                </uix:TargetApp.FilePath>
-                <uix:TargetApp.Selector>
-                  <InArgument x:TypeArguments="x:String">
-                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_56">"&lt;html app='"+Browser+"' title='Automation Exercise - Product Details' /&gt;"</CSharpValue>
-                  </InArgument>
-                </uix:TargetApp.Selector>
-                <uix:TargetApp.WorkingDirectory>
-                  <InArgument x:TypeArguments="x:String" />
-                </uix:TargetApp.WorkingDirectory>
-              </uix:TargetApp>
+              <uix:TargetApp Area="-8, -8, 1616, 868" BrowserType="Chrome" ContentHash="f4016dx4TkmYMvJKAT1vjQ" IconBase64="iVBORw0KGgoAAAANSUhEUgAAAE4AAABTCAIAAAC+gKYPAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAA89JREFUeF7tmsuVqzAMhqeF1EQ9dEML6YANezpgy4YSKCDkHr/AlmSwMWCFy3+0GQJn+LCsF/x9/xv9wQP31YN6Rz2od9SDekc9qHfUg7pH/XdopqGZRvgDEx2EOjZT/fq8pdUV/JWHjkAdSg15d9RmsjmFlRM8h4WSUbvC5Xx93gXP7ZqGOlaIU9g0wBM5KAl1aiGkNpbbNQFVu27xmWPvYhy3615U7bpyW4IIPB9npn2ovc6iXS/+InbsbVDVMi4b0pBbxjAyxaOaNXRgOuTDasE5KRpVRV24aAPy4bZxz8ivSFQdgagAO7puvII6lPDIJYpBncMPjQEqxFJ0OUMjO4HiUztFFbz0EoWjmkXzlge4GPYavPQSBaOagmEli3iLJ2TwyksUiNprDNp1Zb/a4rofm/TkuoCXX6IwVNO+WIFXzhy6cmpRmgHWVtPIIvFsoy7LVVffsafKQOnYbTmN0IdhTsqqVdSxhynEYhPLNYgT7Ct+DtUaFBFW+Csh+FyYo8LbdawuxEp6ha71PpQMgqiehFF82nIVUumHUMmQ0/pqBkLwSfFFHSuV95ao60uktNCqxl1+rqADK5nFWauNSMFV9VaRGUShLvNOqoNZFUSNf1jnyUGV67DcaHyqQA78fk1stitCXUxUP5EiUPn4sA91PX/69Iuou70Ov9c4CXXsZesfcZ8UasrNocy8tuFlje3YUBm/kP2DqLHhRULLf4kIexh1n+sa2aj1WgBHsdpval6jrXQa45i87aCKB7nbdbXmsUvhXU+08jst0vuovJoqsYtoxzuQMz7nn4G6qhlVOaRpeol5jeO39vGQxoPQ5ag6GsFjKHSjRZPDHe+mCFAOVFIANXIfhogN6vnfjnBFjckigWKD6r6kTdmTPrFBdVaVqoGGSoQlMVWGvwSKCSruE6g0ow0F5zCxRfXabt9mgRpRDyfUrSxQUVKVs1hRMMhPUdUu7fzFZph4oDrhd+dW3BQPVDv8npBRlXigJswow8UCdQlLJ9SDszigWh9RnOa9/FATcsmmGKBaMWl3eRAiBqhLTKJK3+OUH9UqlWJQ9TwVHl5RdlT7w66gTCOmUM6LpdDtnRvVrpNCwm/Ct8e5UWPrJDhtUwsLzyJ1Kaqo2mffw13bNio1Qw1z+6tR0V1SJj5PqExPY9oaukcXxnSv4htNssjhy8+hmla22/R2qGtR1au0QX5m6nFIbfo1h5ybLc6c1J1fiuoIxN7lLSs88ShlQnVGoaEhNFFZUJ1P3wOzYrpyo27n0sOUCVVEnbhUka4sqHn0oN5R/wBGC/C5PNYWiAAAAABJRU5ErkJggg==" InformativeScreenshot="71a4a91e30db095d9c43be86de2d108d.jpg" Reference="QVSvyFUrfkGZUFLUcd8YJQ/h4QJ8moF2kCfGZQT6RHwgQ" Selector="&lt;html app='chrome.exe' title='Automation Exercise - Checkout' /&gt;" Url="https://automationexercise.com/view_cart" Version="V2" />
             </uix:NApplicationCard.TargetApp>
           </uix:NApplicationCard>
         </Sequence>

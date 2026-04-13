@@ -4,7 +4,7 @@
   "description": "Test Automation Project",
   "main": "Main.xaml",
   "dependencies": {
-    "LibraryForTenTabs": "[1.0.65]",
+    "LibraryForTenTabs": "[1.0.66]",
     "RecorderForTestCases": "[1.0.6]",
     "UiPath.GSuite.Activities": "[3.7.10]",
     "UiPath.IntegrationService.Activities": "[1.23.0]",
@@ -220,6 +220,13 @@
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
         "fileName": "sample.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "60e620aa-eb71-4eef-92cf-dee02f594b0f",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "RandomEmail.xaml"
       }
     ],
     "saveToCloud": false

@@ -185,7 +185,7 @@
       <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="745,8176" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="745,8179" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_dataTable" />
       <Variable x:TypeArguments="x:Int32" Name="int_reportID" />
@@ -206,9 +206,9 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="653,8153" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="653,8156" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="651,3304" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="651,4523" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="mrOrMrs" />
             <Variable x:TypeArguments="x:String" Name="email" />
@@ -335,7 +335,7 @@
                   </ui:AssignOperation.To>
                   <ui:AssignOperation.Value>
                     <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_29">dt_dataTable.Rows[rowIdx]["email"].ToString()</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_116">dt_dataTable.Rows[1]["email"].ToString()</CSharpValue>
                     </InArgument>
                   </ui:AssignOperation.Value>
                 </ui:AssignOperation>
@@ -547,115 +547,227 @@
               </InArgument>
             </ui:LogMessage.Message>
           </ui:LogMessage>
-          <l:Register sap:VirtualizedContainerService.HintSize="617,1219" sap2010:WorkflowViewState.IdRef="Register_1">
+          <l:Register sap:VirtualizedContainerService.HintSize="617,1219" sap2010:WorkflowViewState.IdRef="Register_3">
             <l:Register.Browser>
               <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_61">Browser</CSharpValue>
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_113">Browser</CSharpValue>
               </InArgument>
             </l:Register.Browser>
             <l:Register.FailedScreenShotPath>
               <OutArgument x:TypeArguments="x:String">
-                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_53">failedScreenShotPath</CSharpReference>
+                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_62">failedScreenShotPath</CSharpReference>
               </OutArgument>
             </l:Register.FailedScreenShotPath>
             <l:Register.address>
               <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_52">address</CSharpValue>
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_104">address</CSharpValue>
               </InArgument>
             </l:Register.address>
             <l:Register.city>
               <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_49">city</CSharpValue>
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_101">city</CSharpValue>
               </InArgument>
             </l:Register.city>
             <l:Register.companyName>
               <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_53">companyName</CSharpValue>
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_105">companyName</CSharpValue>
               </InArgument>
             </l:Register.companyName>
             <l:Register.country>
               <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_51">country</CSharpValue>
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_103">country</CSharpValue>
               </InArgument>
             </l:Register.country>
             <l:Register.date>
               <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_46">date</CSharpValue>
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_98">date</CSharpValue>
               </InArgument>
             </l:Register.date>
             <l:Register.email>
               <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_58">email</CSharpValue>
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_110">email</CSharpValue>
               </InArgument>
             </l:Register.email>
             <l:Register.failedSteps>
               <InOutArgument x:TypeArguments="scg:List(x:String)">
-                <CSharpReference x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_51">failedSteps</CSharpReference>
+                <CSharpReference x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_61">failedSteps</CSharpReference>
               </InOutArgument>
             </l:Register.failedSteps>
             <l:Register.firstName>
               <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_55">firstName</CSharpValue>
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_107">firstName</CSharpValue>
               </InArgument>
             </l:Register.firstName>
             <l:Register.lastName>
               <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_54">lastName</CSharpValue>
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_106">lastName</CSharpValue>
               </InArgument>
             </l:Register.lastName>
             <l:Register.mobileNumber>
               <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_47">mobileNumber</CSharpValue>
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_99">mobileNumber</CSharpValue>
               </InArgument>
             </l:Register.mobileNumber>
             <l:Register.month>
               <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_62">month</CSharpValue>
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_114">month</CSharpValue>
               </InArgument>
             </l:Register.month>
             <l:Register.mrOrMrs>
               <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_57">mrOrMrs</CSharpValue>
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_109">mrOrMrs</CSharpValue>
               </InArgument>
             </l:Register.mrOrMrs>
             <l:Register.name>
               <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_59">name</CSharpValue>
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_111">name</CSharpValue>
               </InArgument>
             </l:Register.name>
             <l:Register.password>
               <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_56">password</CSharpValue>
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_108">password</CSharpValue>
               </InArgument>
             </l:Register.password>
             <l:Register.reportIdLocal>
               <InArgument x:TypeArguments="x:Int32">
-                <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_60">reportIdLocal</CSharpValue>
+                <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_112">reportIdLocal</CSharpValue>
               </InArgument>
             </l:Register.reportIdLocal>
             <l:Register.state>
               <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_50">state</CSharpValue>
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_102">state</CSharpValue>
               </InArgument>
             </l:Register.state>
             <l:Register.steps>
               <InOutArgument x:TypeArguments="scg:List(x:String)">
-                <CSharpReference x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_52">steps</CSharpReference>
+                <CSharpReference x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_63">steps</CSharpReference>
               </InOutArgument>
             </l:Register.steps>
             <l:Register.suiteIdLocal>
               <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_45">suiteIdLocal</CSharpValue>
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_97">suiteIdLocal</CSharpValue>
               </InArgument>
             </l:Register.suiteIdLocal>
             <l:Register.year>
               <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_63">year</CSharpValue>
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_115">year</CSharpValue>
               </InArgument>
             </l:Register.year>
             <l:Register.zipCode>
               <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_48">zipCode</CSharpValue>
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_100">zipCode</CSharpValue>
+              </InArgument>
+            </l:Register.zipCode>
+          </l:Register>
+          <l:Register sap:VirtualizedContainerService.HintSize="617,1219" sap2010:WorkflowViewState.IdRef="Register_2">
+            <l:Register.Browser>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_94">Browser</CSharpValue>
+              </InArgument>
+            </l:Register.Browser>
+            <l:Register.FailedScreenShotPath>
+              <OutArgument x:TypeArguments="x:String">
+                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_59">failedScreenShotPath</CSharpReference>
+              </OutArgument>
+            </l:Register.FailedScreenShotPath>
+            <l:Register.address>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_85">address</CSharpValue>
+              </InArgument>
+            </l:Register.address>
+            <l:Register.city>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_82">city</CSharpValue>
+              </InArgument>
+            </l:Register.city>
+            <l:Register.companyName>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_86">companyName</CSharpValue>
+              </InArgument>
+            </l:Register.companyName>
+            <l:Register.country>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_84">country</CSharpValue>
+              </InArgument>
+            </l:Register.country>
+            <l:Register.date>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_79">date</CSharpValue>
+              </InArgument>
+            </l:Register.date>
+            <l:Register.email>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_91">"test" + DateTime.Now.ToString("yyyyMMddHHmmss") + "@gmail.com";</CSharpValue>
+              </InArgument>
+            </l:Register.email>
+            <l:Register.failedSteps>
+              <InOutArgument x:TypeArguments="scg:List(x:String)">
+                <CSharpReference x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_58">failedSteps</CSharpReference>
+              </InOutArgument>
+            </l:Register.failedSteps>
+            <l:Register.firstName>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_88">firstName</CSharpValue>
+              </InArgument>
+            </l:Register.firstName>
+            <l:Register.lastName>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_87">lastName</CSharpValue>
+              </InArgument>
+            </l:Register.lastName>
+            <l:Register.mobileNumber>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_80">mobileNumber</CSharpValue>
+              </InArgument>
+            </l:Register.mobileNumber>
+            <l:Register.month>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_95">month</CSharpValue>
+              </InArgument>
+            </l:Register.month>
+            <l:Register.mrOrMrs>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_90">mrOrMrs</CSharpValue>
+              </InArgument>
+            </l:Register.mrOrMrs>
+            <l:Register.name>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_92">name</CSharpValue>
+              </InArgument>
+            </l:Register.name>
+            <l:Register.password>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_89">password</CSharpValue>
+              </InArgument>
+            </l:Register.password>
+            <l:Register.reportIdLocal>
+              <InArgument x:TypeArguments="x:Int32">
+                <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_93">reportIdLocal</CSharpValue>
+              </InArgument>
+            </l:Register.reportIdLocal>
+            <l:Register.state>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_83">state</CSharpValue>
+              </InArgument>
+            </l:Register.state>
+            <l:Register.steps>
+              <InOutArgument x:TypeArguments="scg:List(x:String)">
+                <CSharpReference x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_60">steps</CSharpReference>
+              </InOutArgument>
+            </l:Register.steps>
+            <l:Register.suiteIdLocal>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_78">suiteIdLocal</CSharpValue>
+              </InArgument>
+            </l:Register.suiteIdLocal>
+            <l:Register.year>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_96">year</CSharpValue>
+              </InArgument>
+            </l:Register.year>
+            <l:Register.zipCode>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_81">zipCode</CSharpValue>
               </InArgument>
             </l:Register.zipCode>
           </l:Register>
@@ -674,7 +786,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="651,2303" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="651,1087" sap2010:WorkflowViewState.IdRef="Sequence_4">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -687,7 +799,7 @@
                   </InArgument>
                 </ui:LogMessage.Message>
               </ui:LogMessage>
-              <Sequence DisplayName="JIRA" sap:VirtualizedContainerService.HintSize="617,2060" sap2010:WorkflowViewState.IdRef="Sequence_12">
+              <Sequence DisplayName="JIRA" sap:VirtualizedContainerService.HintSize="617,844" sap2010:WorkflowViewState.IdRef="Sequence_12">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="ss:SecureString" Name="JiraApi" />
                 </Sequence.Variables>
@@ -696,14 +808,14 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:GetSecret TimeoutMS="{x:Null}" AssetName="JiraAPIToken" DisplayName="Get Secret" FolderPath="dg934257@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="583,190" sap2010:WorkflowViewState.IdRef="GetSecret_1">
+                <ui:GetSecret TimeoutMS="{x:Null}" AssetName="JiraAPIToken" DisplayName="Get Secret" FolderPath="dg934257@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="484,190" sap2010:WorkflowViewState.IdRef="GetSecret_1">
                   <ui:GetSecret.Secret>
                     <OutArgument x:TypeArguments="ss:SecureString">
                       <CSharpReference x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpReference`1_45">JiraApi</CSharpReference>
                     </OutArgument>
                   </ui:GetSecret.Secret>
                 </ui:GetSecret>
-                <uja:JiraScope ClientID="{x:Null}" ClientSecret="{x:Null}" Connection="{x:Null}" ContinueOnError="{x:Null}" JiraConnection="{x:Null}" AuthenticationType="Api Token" DisplayName="Jira Scope" sap:VirtualizedContainerService.HintSize="583,1779" sap2010:WorkflowViewState.IdRef="JiraScope_1" ServerURL="https://testertests404.atlassian.net/" UserName="testertests404@gmail.com">
+                <uja:JiraScope ClientID="{x:Null}" ClientSecret="{x:Null}" Connection="{x:Null}" ContinueOnError="{x:Null}" JiraConnection="{x:Null}" AuthenticationType="Api Token" DisplayName="Jira Scope" sap:VirtualizedContainerService.HintSize="484,563" sap2010:WorkflowViewState.IdRef="JiraScope_1" ServerURL="https://testertests404.atlassian.net/" UserName="testertests404@gmail.com">
                   <uja:JiraScope.ApiToken>
                     <InArgument x:TypeArguments="ss:SecureString">
                       <CSharpValue x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpValue`1_73">JiraApi</CSharpValue>
@@ -714,7 +826,7 @@
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="usa:IObjectContainer" Name="ScopeActivity" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="549,1665" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,449" sap2010:WorkflowViewState.IdRef="Sequence_17">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="aj:Issue" Name="newBug" />
                           <Variable x:TypeArguments="aj:Issue[]" Name="numOfIsssues" />
@@ -724,7 +836,7 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uja:SearchIssuesUsingJQL ContinueOnError="{x:Null}" MaxResults="{x:Null}" DisplayName="Search Issues Using JQL" sap:VirtualizedContainerService.HintSize="515,122" sap2010:WorkflowViewState.IdRef="SearchIssuesUsingJQL_1" JQL="project = G4 AND summary ~ &quot;TC_05&quot;">
+                        <uja:SearchIssuesUsingJQL ContinueOnError="{x:Null}" MaxResults="{x:Null}" DisplayName="Search Issues Using JQL" sap:VirtualizedContainerService.HintSize="416,122" sap2010:WorkflowViewState.IdRef="SearchIssuesUsingJQL_1" JQL="project = G4 AND summary ~ &quot;TC_05&quot;">
                           <uja:SearchIssuesUsingJQL.Issues>
                             <OutArgument x:TypeArguments="aj:Issue[]">
                               <CSharpReference x:TypeArguments="aj:Issue[]" sap2010:WorkflowViewState.IdRef="CSharpReference`1_46">numOfIsssues</CSharpReference>
@@ -734,14 +846,14 @@
                             <scg:Dictionary x:TypeArguments="ubt:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
                           </uja:SearchIssuesUsingJQL.TelemetryProperties>
                         </uja:SearchIssuesUsingJQL>
-                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="515,179" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info">
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,179" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info">
                           <ui:LogMessage.Message>
                             <InArgument x:TypeArguments="x:Object">
                               <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_65">"Number of issues: " + numOfIsssues.Length.ToString()</CSharpValue>
                             </InArgument>
                           </ui:LogMessage.Message>
                         </ui:LogMessage>
-                        <If sap:VirtualizedContainerService.HintSize="515,1300" sap2010:WorkflowViewState.IdRef="If_5">
+                        <If sap:VirtualizedContainerService.HintSize="515,1273" sap2010:WorkflowViewState.IdRef="If_5">
                           <If.Condition>
                             <InArgument x:TypeArguments="x:Boolean">
                               <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_66">numOfIsssues.Length&lt;=0</CSharpValue>
